@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 
-const UploadResume = styled.div`
+const AddCoverLetter = styled.div`
     width: 46%;
     margin: auto;
 
@@ -31,30 +31,52 @@ const UploadResume = styled.div`
     h2{
         margin: 19px 0;
     }
-
-    div:nth-child(5){
-        display:flex;
-        align-items: center;
-        cursor:pointer;
-        border: 1px solid rgb(22, 64, 129);
-        padding: 12px;
-        border-radius:8px;
-
+    h4>span{
+        font-weight: normal;
     }
-    div:nth-child(5)>:first-child{
-        width: 25px;
-        height:25px;
+
+    & label{
+        font-weight: bold;
+    }
+    & input{
+        display: block;
+        width: 94%;
+        padding:11px;
+        border: 1px solid black;
+        border-radius:7px;
+        margin: 8px 0 28px;
+        font-size:17px;
+        outline:none;
+    }
+    div:nth-child(5),div:nth-child(6){
+        display:flex;
+        /* justify-content:space-evenly; */
+        align-items: center;
+        border: 1px solid rgb(22, 64, 129);
+        border-radius:8px;
+        padding: 11px;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+    div:nth-child(5)>:first-child,div:nth-child(6)>:first-child{
+        width: 30px;
+        height: 30px;
         color: grey;
         margin-right: 8px;
-        padding:5px;
     }
-    div:nth-child(5)>:nth-child(3){
+    div:nth-child(5)>:nth-child(3),div:nth-child(6)>:nth-child(3){
         width: 20px;
         height: 20px;
         color: white;
         background: rgb(22, 64, 129);
         border-radius: 50%;
         margin-left: 130px;
+    }
+    div:nth-child(6)>:nth-child(3){
+        margin-left: 160px;
+    }
+    div:nth-child(6)>:nth-child(5){
+        display:block;
     }
     & section>h4{
         color: rgb(22, 64, 129);
@@ -63,20 +85,20 @@ const UploadResume = styled.div`
         font-size:14px;
     }
 
-    div:nth-child(6){
+    div:nth-child(7){
         display:flex;
         justify-content:flex-end;
         align-items:center;
         margin-top:50px;
         margin-bottom:50px;
     }
-    div:nth-child(6)>:first-child{
+    div:nth-child(7)>:first-child{
         color: rgb(22, 64, 129);
         margin-right: 30px;
         cursor: pointer;
     }
-    div:nth-child(6)>button{
-        width: 125px;
+    div:nth-child(7)>button{
+        width: 220px;
         background: rgb(22, 64, 129);
         padding:13px;
         font-weight: bold;
@@ -86,13 +108,14 @@ const UploadResume = styled.div`
         color: white;
         cursor: pointer;
     }
-    
+
     & p{
         text-align:center;
     }
     p>span{
         color:rgb(22, 64, 129);
+        cursor: pointer;
     }
+`;
 
-`
-export default UploadResume
+export default AddCoverLetter;

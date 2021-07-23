@@ -1,4 +1,5 @@
 import React from 'react'
+import { ProgressBar } from 'react-step-progress-bar'
 import { useState } from 'react'
 import { useRef } from 'react'
 import { MdInfo } from "react-icons/md";
@@ -7,132 +8,20 @@ import { BsFileEarmarkArrowUp } from "react-icons/bs";
 import { CgFileRemove } from "react-icons/cg";
 import { FaFileSignature } from "react-icons/fa";
 import { TiTick } from "react-icons/ti";
+// import { Switch, Route } from 'react-router-dom'
 import FormDiv from './StyledForm'
 import UploadResume from './StyledUploadResume'
 import AddExperience from './StyledExperience'
-import styled from 'styled-components'
-
-const AddCoverLetter = styled.div`
-    width: 46%;
-    margin: auto;
-
-    div:first-child{
-        width: 100%;
-        height:7px;
-        background: navy;
-        border-radius:12px;
-        margin: 50px 0 10px;
-        padding:0;
-    }
-    div:nth-child(2){
-        display:flex;
-        align-items: center;
-    }
-    div:nth-child(2)>:first-child{
-        cursor:pointer;
-        width: 20px;
-        margin-right: 8px;
-        padding:5px;
-    }
-    div:nth-child(2)>:first-child:hover{
-        background: rgb(238, 241, 254);
-        border-radius:5px;
-    }
-
-    h2{
-        margin: 19px 0;
-    }
-    h4>span{
-        font-weight: normal;
-    }
-
-    & label{
-        font-weight: bold;
-    }
-    & input{
-        display: block;
-        width: 94%;
-        padding:11px;
-        border: 1px solid black;
-        border-radius:7px;
-        margin: 8px 0 28px;
-        font-size:17px;
-        outline:none;
-    }
-    div:nth-child(5),div:nth-child(6){
-        display:flex;
-        /* justify-content:space-evenly; */
-        align-items: center;
-        border: 1px solid rgb(22, 64, 129);
-        border-radius:8px;
-        padding: 11px;
-        margin-top: 10px;
-        cursor: pointer;
-    }
-    div:nth-child(5)>:first-child,div:nth-child(6)>:first-child{
-        width: 30px;
-        height: 30px;
-        color: grey;
-        margin-right: 8px;
-    }
-    div:nth-child(5)>:nth-child(3),div:nth-child(6)>:nth-child(3){
-        width: 20px;
-        height: 20px;
-        color: white;
-        background: rgb(22, 64, 129);
-        border-radius: 50%;
-        margin-left: 130px;
-    }
-    div:nth-child(6)>:nth-child(3){
-        margin-left: 160px;
-    }
-    div:nth-child(6)>:nth-child(5){
-        display:block;
-    }
-    & section>h4{
-        color: rgb(22, 64, 129);
-    }
-    & section>p{
-        font-size:14px;
-    }
-
-    div:nth-child(7){
-        display:flex;
-        justify-content:flex-end;
-        align-items:center;
-        margin-top:50px;
-        margin-bottom:50px;
-    }
-    div:nth-child(7)>:first-child{
-        color: rgb(22, 64, 129);
-        margin-right: 30px;
-        cursor: pointer;
-    }
-    div:nth-child(7)>button{
-        width: 220px;
-        background: rgb(22, 64, 129);
-        padding:13px;
-        font-weight: bold;
-        font-size:15px;
-        border-radius:5px;
-        border: none;
-        color: white;
-        cursor: pointer;
-    }
-
-    & p{
-        text-align:center;
-    }
-    p>span{
-        color:rgb(22, 64, 129);
-        cursor: pointer;
-    }
-`;
+import AddCoverLetter from './StyledCoverLetter'
 
 
 
 const ApplyForm = () => {
-    const [showInput, setShowInput] = useState(false);
+    // const [showInput, setShowInput] = useState(true);
+    const [step1, setStep1] = useState(true)
+    const [step2, setStep2] = useState(false)
+    const [step3, setStep3] = useState(false)
+    const [step4, setStep4] = useState(false)
     const [coverLetter, setCoverLetter] = useState(true);
     const inputRef = useRef()
 
@@ -140,20 +29,36 @@ const ApplyForm = () => {
         console.log(event.target.value);
     }
 
-    const handleContinue = (event) => {
+    const handleContinue1 = (event) => {
         event.preventDefault();
-        console.log("Working")
-        setShowInput(true);
+        console.log("handleContinue1")
+        setStep1(!step1)
+        setStep2(!step2)
+        // setShowInput(true);
     }
+    const handleContinue2 = (event) => {
+        event.preventDefault();
+        console.log("handleContinue2")
+        setStep2(!step2)
+        setStep3(!step3)
 
-
-    const handleChoose = () => {
-        inputRef.current.click();
-        console.log("hello UploadResume");
+        // setShowInput(true);
+    }
+    const handleContinue3 = (event) => {
+        event.preventDefault();
+        console.log("handleContinue4")
+        setStep3(!step3)
+        setStep4(!step4)
+        // setShowInput(true);
     }
 
     const handleReview = () => {
         console.log("handleReview")
+    }
+
+    const handleChoose = () => {
+        inputRef.current.click();
+        console.log("hello UploadResume");
     }
 
     const handleCoverLetter = () => {
@@ -164,8 +69,12 @@ const ApplyForm = () => {
 
     return (
         <>
-            {showInput && <FormDiv>
-                <div></div>
+            {step1 && <FormDiv>
+                {/* <div >
+                </div> */}
+                <ProgressBar percent={20} unfilledBackground="gray" />
+
+
                 <h5>Application step 1 of 5</h5>
                 <h2>Add your contact information</h2>
                 <form>
@@ -177,7 +86,7 @@ const ApplyForm = () => {
                     <input type="text" name="phoneNumber" onChange={handleChange} />
                     <h4>Email</h4>
                     <p>email@example.com</p>
-                    <label htmlFor="phoneNumber">City </label><small>(optional)</small>
+                    <label htmlFor="phoneNumber">City, State </label><small>(optional)</small>
                     <input type="text" name="phoneNumber" onChange={handleChange} />
                     <div>
                         <MdInfo />
@@ -185,16 +94,18 @@ const ApplyForm = () => {
                     </div>
                     <div>
                         <h4>Return to job search</h4>
-                        <button onClick={handleContinue}>Continue</button>
+                        <button onClick={handleContinue1}>Continue</button>
                     </div>
                 </form>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
             </FormDiv>}
 
-            {showInput && <UploadResume>
-                <div></div>
+            {step2 && <UploadResume>
+                {/* <div></div> */}
+                <ProgressBar percent={40} unfilledBackground="gray" />
+
                 <div>
-                    <BiArrowBack />
+                    <BiArrowBack onClick={handleContinue1} />
                     <h5>Application step 2 of 5</h5>
                 </div>
                 <h2>Add a resume for FlexTrade</h2>
@@ -205,19 +116,22 @@ const ApplyForm = () => {
                         <h4>Upload resume</h4>
                         <p>Use a pdf, docx, doc, rtf and txt</p>
                     </section>
+                    <TiTick />
                 </div>
 
                 <div>
                     <h4>Return to job search</h4>
-                    <button onClick={handleContinue}>Continue</button>
+                    <button onClick={handleContinue2}>Continue</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
             </UploadResume>}
 
-            {showInput && <AddExperience>
-                <div></div>
+            {step3 && <AddExperience>
+                {/* <div></div> */}
+                <ProgressBar percent={60} unfilledBackground="gray" />
+
                 <div>
-                    <BiArrowBack />
+                    <BiArrowBack onClick={handleContinue2} />
                     <h5>Application step 3 of 5</h5>
                 </div>
                 <h2>Enter a past job that shows relevant experience</h2>
@@ -232,15 +146,17 @@ const ApplyForm = () => {
                 </form>
                 <div>
                     <h4>Exit</h4>
-                    <button onClick={handleContinue}>Continue</button>
+                    <button onClick={handleContinue3}>Continue</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
             </AddExperience>}
 
-            <AddCoverLetter>
-                <div></div>
+            {step4 && <AddCoverLetter>
+                {/* <div></div> */}
+                <ProgressBar percent={80} unfilledBackground="gray" />
+
                 <div>
-                    <BiArrowBack />
+                    <BiArrowBack onClick={handleContinue3} />
                     <h5>Application step 4 of 5</h5>
                 </div>
                 <h2>Want to include any supporting documents?</h2>
@@ -268,8 +184,7 @@ const ApplyForm = () => {
                     <button onClick={handleReview}>Review your application</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
-            </AddCoverLetter>
-
+            </AddCoverLetter>}
         </>
     )
 }
