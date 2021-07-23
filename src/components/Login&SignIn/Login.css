@@ -1,0 +1,93 @@
+.greyBackground{
+    background:#efefef;
+    /* height:100vh; */
+    font-family: sans-serif;
+    
+}
+.textCentre{
+    text-align: center;
+}
+img{
+    width:25%;
+    margin-bottom: -5%;
+}
+p{
+    color:rgb(68, 67, 67);
+    /* margin:5%; */
+    font-size: 18px;
+}
+.inputBox{
+    width:90%;
+    display:block;
+    height:2vw;
+
+}
+input::selection{
+    border-color: #085ff7;
+}
+
+button{
+    text-align: center;
+    height:3vw;
+    font-size: 1vw;
+}
+.logo{
+    width:50px;
+    float: left;
+}
+.container{
+    width: 27vw;
+    margin:auto;
+    padding-top: 40px;   
+}
+form{
+    background:white;
+    padding: 5%;
+    margin:auto
+    
+}
+button{
+    display:block;
+    width:100%;
+    padding:2% ;
+    margin:6% 0px;
+    border-radius:100px;
+    height:2.5vw;
+    background:white;
+    font-size: 16px;
+    font-weight: 600;
+}
+.facebookButton{
+    color:#085ff7;
+    border-color:#085ff7
+}
+.SignInButton{
+    background-color: #085ff7;
+    color:white;
+    border:none;
+}
+.devider_left{
+    width: 40%;
+   
+    float: left;
+}
+.or{
+    width:10%;
+    float:left;
+    margin:auto;
+    text-align: center;
+    font-size:18px;
+    color:grey;
+
+    font-weight: 400;
+}
+.SingInText{
+    font-size: 24px;
+}
+.Terms{
+    font-size:13px;
+    font-weight: 10;
+}
+/* .BlueColor{
+    colo
+} */
