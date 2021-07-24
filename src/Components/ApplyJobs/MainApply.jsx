@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 import ApplyForm from './ApplyForm'
-// import { useLocation } from 'react-router'
 
 const MainApplyDiv = styled.div`
     width: 100%;
