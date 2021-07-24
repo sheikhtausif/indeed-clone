@@ -22,6 +22,7 @@ const MainApply = () => {
     return (
         <MainApplyDiv>
             <LeftApplyDiv>
+
                 <ApplyForm />
 
             </LeftApplyDiv>

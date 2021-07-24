@@ -23,72 +23,46 @@ const ApplyForm = () => {
     const [review, setReview] = useState(false)
     const [coverLetter, setCoverLetter] = useState(true);
     const inputRef = useRef()
-    // const [myPdf, setMyPdf] = useState("");
-    // console.log('myPdf:', myPdf)
-    // const [newPdf, setNewPdf] = useState("");
+
 
     const [formData, setFormData] = useState({})
 
     const handleChange = (event) => {
-        // console.log(event.target.value);
         const { name, value } = event.target
 
         setFormData({ ...formData, [name]: value })
-        // setMyPdf(event.target.files[0]);
-
     }
 
     const handleContinue1 = (event) => {
         event.preventDefault();
-        // console.log("handleContinue1")
         setStep1(!step1)
         setStep2(!step2)
-        // console.log('formData:', formData)
 
     }
+
     const handleContinue2 = () => {
-        // event.preventDefault();
-        // console.log("handleContinue2")
         setStep2(!step2)
         setStep3(!step3)
-
-        // const reader = new FileReader();
-        // console.log(reader);
-        // reader.onload = () => {
-        //     if (reader.readyState === 2) {
-        //         setNewPdf(reader.result);
-        //     }
-        // };
-        // reader.readAsDataURL(myPdf);
-
-        // setFormData({ ...formData, newPdf })
-        // console.log('formData:', formData)
-
     }
+
     const handleContinue3 = (event) => {
         event.preventDefault();
-        // console.log("handleContinue3")
         setStep3(!step3)
         setStep4(!step4)
-        console.log('formData:', formData)
-
     }
 
     const handleReview = () => {
-        // console.log("handleReview")
         setStep4(!step4)
         setReview(!review)
+        console.log(formData)
     }
 
     const handleChoose = () => {
         inputRef.current.click();
-        // console.log("hello UploadResume");
     }
 
     const handleCoverLetter = () => {
-        // console.log("cover letter");
         setCoverLetter(!coverLetter)
-
     }
 
     return (

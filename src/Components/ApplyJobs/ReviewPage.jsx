@@ -18,7 +18,7 @@ import ReviewDiv from './StyledReviewPage'
 // }
 
 const ReviewPage = ({ handleReview, formData }) => {
-    console.log(formData)
+    // console.log(formData)
 
     const submitApplication = () => {
         console.log("submit done");
@@ -57,8 +57,7 @@ const ReviewPage = ({ handleReview, formData }) => {
             <h4>Resume</h4>
             <div className="resume">
                 <VscFilePdf />
-                {/* <h3>{formData.myPdf}</h3> */}
-                <h3>Resume.Pdf</h3>
+                <h3>{formData.resume.slice(12)}</h3>
             </div>
 
             <h4>Employee questions</h4>
