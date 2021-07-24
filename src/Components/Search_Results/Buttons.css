@@ -1,0 +1,59 @@
+.button{
+    height: 41px;
+    width: auto;
+    min-width: 100px; 
+    background-color:red;
+    border-radius: 7px !important;
+    position: relative;
+    box-shadow: none !important;
+    box-sizing: border-box !important;
+  }
+  .butclicked{
+    height: 41px;
+    box-sizing: border-box !important;
+
+    width: auto;
+    min-width: 100px; 
+    background-color:grey !important;
+    border-radius: 7px !important;
+    position: relative;
+    box-shadow: none !important;
+  }
+  .button:hover{
+    background-color:hsl(0, 0%, 76%) !important;
+
+  }
+  .button-label{
+    font-size: 12px ;
+    letter-spacing: 0;
+    text-transform: capitalize;
+    font-weight: 400;
+    line-height: 1.34;
+    
+  }
+  #expand{
+    position: absolute;
+    max-height: 280px;
+    overflow-y: scroll;
+    top: 175px;
+    background-color: white !important;
+   }
+   /* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

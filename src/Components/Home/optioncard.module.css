@@ -1,0 +1,37 @@
+.cards {
+  padding: 0 0.75rem !important;
+  height: 2.75rem !important;
+  min-height: 2.75rem !important;
+
+  margin-right: 8px;
+  margin-bottom: 12px;
+  background-color: #e4e2e0;
+  border-color: #e4e2e0 !important;
+
+  color: #2d2d2d !important;
+  cursor: pointer;
+
+  border-radius: 8px;
+  border: 0;
+  align-items: center;
+  display: flex;
+}
+.cards:hover {
+  background-color: rgb(171, 169, 168);
+  /* background-color: red; */
+}
+.logo {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  background-color: transparent !important;
+}
+.opt {
+  font-weight: 400;
+  letter-spacing: normal;
+  font-size: 0.875rem;
+  height: auto !important;
+  line-height: 1.25rem;
+}
