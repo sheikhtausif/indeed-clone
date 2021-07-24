@@ -32,24 +32,19 @@ const Foot = styled.div`
   @media (max-width: 620px) {
     ul {
       display: flex;
-      -webkit-box-orient: horizontal;
-      -webkit-box-direction: normal;
-      -webkit-flex-flow: row wrap;
-      flex-flow: row wrap;
+      flex-direction:column;
       list-style: none;
-      -webkit-box-flex: 1;
       width: 90vw !important;
-
-      -webkit-box-align: baseline !important;
-
-      align-items: baseline !important;
-
-      font-size: 0.875rem;
+      font-size: 1rem;
       letter-spacing: 0;
       font-weight: 400;
       line-height: 1.43;
     }
+    span{
+      display:none;
+    }
     li {
+      color:grey;
       background-color: #ffffff;
     }
   }
@@ -61,23 +56,23 @@ export function Footer() {
       <Foot>
         <div>
           <ul>
-            <li>Career Advice - </li>
-            <li>Browse Jobs - </li>
-            <li>Browse Companies - </li>
-            <li>Salaries - </li>
-            <li>Indeed Events - </li>
-            <li>Work at Indeed - </li>
-            <li>Countries - </li>
-            <li>About - </li>
+            <li>Career Advice <span>-</span> </li>
+            <li>Browse Jobs <span>-</span> </li>
+            <li>Browse Companies <span>-</span> </li>
+            <li>Salaries <span>-</span> </li>
+            <li>Indeed Events <span>-</span> </li>
+            <li>Work at Indeed <span>-</span> </li>
+            <li>Countries <span>-</span> </li>
+            <li>About <span>-</span> </li>
             <li>Help Center</li>
           </ul>
 
           <ul>
-            <li>© 2021 Indeed - </li>
-            <li>Accessibility at Indeed - </li>
-            <li>Privacy Center - </li>
-            <li>Cookies - </li>
-            <li>Privacy - </li>
+            <li>© 2021 Indeed <span>-</span> </li>
+            <li>Accessibility at Indeed <span>-</span> </li>
+            <li>Privacy Center <span>-</span> </li>
+            <li>Cookies <span>-</span> </li>
+            <li>Privacy <span>-</span> </li>
             <li>Terms</li>
           </ul>
         </div>

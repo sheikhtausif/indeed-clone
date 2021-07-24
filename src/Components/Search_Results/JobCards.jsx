@@ -50,8 +50,8 @@ export const JobCards = ({ele,setDetails,crossit,setCrossit}) => {
                 <p className="postDate">{ele.date} days ago</p>
                 </nav>
                 {status?null:<div className="undo" onClick={()=>setStatus(!status)}>
-                    <h2>Job removed</h2>
-                    <h1>Undo</h1>
+                    <div>Job removed</div>
+                    <div>Undo</div>
                     </div>}
               </div>
        

@@ -15,8 +15,10 @@ const Head = styled.div`
 const Left = styled.div`
   margin-left: 15px;
   display: flex;
-
+ 
+width:350px;
   div {
+    font-size:15px;
     margin-right: 15px;
     padding-bottom: 15px;
   }
@@ -27,9 +29,12 @@ const Left = styled.div`
 `;
 
 const Right = styled.div`
-  margin-left: 47vw;
+  margin-left: 39vw;
   display: flex;
+  width:400px;
+
   div {
+    font-size:15px;
     margin-right: 15px;
     padding-bottom: 15px;
   }
@@ -62,7 +67,7 @@ function Header() {
         </svg>
       </div>
       <Left>
-        <div>Find jobs</div>
+        <div style={{borderBottom:"0.125rem solid transparent",borderBottomColor: "#2557a7"}}>Find jobs</div>
         <div>Company reviews</div>
         <div>Find salaries</div>
       </Left>
@@ -76,7 +81,7 @@ function Header() {
             fontWeight: "700",
           }}
         >
-          <Link to="/signup">Sign Up</Link>
+          <Link to="/signup">Sign In</Link>
         </div>
         <div
           style={{

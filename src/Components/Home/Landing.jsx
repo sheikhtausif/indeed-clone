@@ -37,7 +37,7 @@ function Landing() {
   const optimisedVersion = useCallback(debounce(handleChange), []);
 
   return (
-    <div>
+    <div className="sd">
       <div className={styles.head}> {sign ? <Header /> : <Header1 />}</div>
 
       <div className={styles.head2}>
@@ -65,8 +65,8 @@ function Landing() {
                       onChange={optimisedVersion}
                     />
                   </div>
-                  <div style={{ paddingRight: "1rem" }}>
-                    <BsSearch />{" "}
+                  <div style={{ paddingRight: "0rem" }}>
+                    <BsSearch style={{width:12}} />{" "}
                   </div>
                 </div>
                 {search?.length > 0 && (
@@ -89,35 +89,34 @@ function Landing() {
                       className={styles.inpu}
                     />
                   </div>
-                  <div style={{ paddingRight: "1rem" }}>
+                  <div style={{ paddingRight: "0rem" }}>
                     <MdLocationOn />{" "}
                   </div>
                 </div>
               </div>
             </form>
-            <button className={styles.btn,styles.buttn}><Link exact to="/results">Find jobs</Link></button>
+            <button className={styles.btn} ><Link className="link" exact to="/results">Find jobs</Link></button>
           </div>
         </div>
 
         <div className={styles.contain}>
           <div className={styles.post}>
-            <span className={styles.highlight}>Post your resume</span>
-            <span> - </span>
-            <span className={styles.para}>It only takes a few seconds</span>
+            <span className={styles.highlight}>Post your resume -</span>
+            <span className={styles.para}> It only takes a few seconds</span>
           </div>
         </div>
 
         <div className={styles.contain1}>
           <div className={styles.post1}>
-            <span className={styles.highlight}>Employers: Post a job</span>
-            <span> - </span>
+            <span className={styles.highlight}>Employers: Post a job -</span>
+           
             <span className={styles.para}>Your next hire is here</span>
           </div>
         </div>
         <div className={styles.empty1}></div>
        
         <div className={styles.searchTitle}>
-          <h2>Popular Search</h2>
+          <h2>Popular searches</h2>
           <div className={styles.options}>
             <Optioncard title="Government" />
             <Optioncard title="Online Typing" />

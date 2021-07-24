@@ -1,13 +1,12 @@
- .App{
+  .App{
   width: 100%;
-  
-}
-
-*,
+  overflow-x: hidden !important;
+} 
+/* *,
 *::before,
 *::after {
   box-sizing:content-box !important;
-}
+}  */
 .upper-part{
   width: 77%;
   margin: auto;

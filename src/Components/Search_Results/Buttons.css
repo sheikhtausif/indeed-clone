@@ -35,12 +35,13 @@
     position: absolute;
     max-height: 280px;
     overflow-y: scroll;
-    top: 175px;
+    top: 185px;
     background-color: white !important;
    }
    /* width */
 ::-webkit-scrollbar {
   width: 7px;
+  
 }
 
 /* Track */

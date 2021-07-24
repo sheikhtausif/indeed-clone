@@ -1,24 +1,52 @@
 .jobHeadings{
-    width: 94.5%;
+    width: 100%;
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     padding: 0 15px;
     padding-bottom: 25px;
     box-shadow: 0 5px 5px gainsboro;
 }
-.title{
+.titlee{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.jobHeadings>h4{
-    margin:  -15px 0;
+.comp>p{
+    margin: 0;
+}
+.rating{
+    margin-bottom: 18px !important;
+    margin-right: 10px !important;
+}
+.app a{
+    color: white;
+}
+.app a:hover{
+    color: white;
+}
+.comp>h4{
+    font-size: 15px;
+    margin-bottom: 0;
+    /* margin:  -15px 0; */
+ display: flex;
+ align-items: center;
+}
+.jobHeadings >h4{
+    font-size: 18px;
+    margin-bottom: -10px !important;
+    /* margin:  -15px 0; */
  display: flex;
  align-items: center;
 }
 .jobHeadings h3{
     margin-bottom: 0 !important;
+}
+
+.comp{
+    display: flex;
+    height: 30px;
+    align-items: center;
 }
 .apply{
     margin-top: 25px;
@@ -55,6 +83,7 @@
     margin-top: 0;
     cursor: pointer;
     height: 47px;
+    border-radius: 12px;
 }
 #expandd{
     position: absolute;

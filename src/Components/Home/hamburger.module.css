@@ -1,33 +1,23 @@
-.hamburger {
-  display: flex;
 
-  justify-content: start;
-  align-items: center;
-}
-.menu-bars {
-  margin-left: 3rem;
-  font-size: 2rem;
-  background: red;
-}
 .nav-menu {
-  display: flex;
+  display: none;
   position: fixed;
   top: 0;
   right: -100%;
   transition: 850ms;
 }
-.active {
-  display: flex;
+#active {
+  display: none !important;
 
   margin: 0;
-  position: fixed;
-  top: 0px;
+  position: absolute;
+  top: 110px !important;
   height: 100%;
   background-color: rgb(255, 255, 255);
   flex-direction: column;
   width: 70%;
-  min-width: min(100%, 16.875rem);
-  max-width: 30rem;
+  min-width: 100%;
+ 
   right: 0px;
   transition: right 300ms ease 0s;
   padding-right: 1rem;
