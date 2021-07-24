@@ -2,6 +2,9 @@ import React from 'react'
 import './JobCards.css'
 import './JobDetails.css'
 import Skeleton from 'react-loading-skeleton';
+
+import { Link} from "react-router-dom";
+
 import StarRatings from 'react-star-ratings';
 export const JobDetails = ({details, crossit, setCrossit}) => {
     
@@ -22,7 +25,7 @@ export const JobDetails = ({details, crossit, setCrossit}) => {
                     </p></h4>
                 <h4>Noida, Uttar Pradedh</h4>
                 <div className="apply">
-                    <div className="app">Apply Now</div>
+                    <div className="app"><Link to="/apply">Apply Now</Link></div>
                     <img src="/heart.png" alt="" />
                 </div>
         </div>

@@ -149,17 +149,17 @@
   height: 1.125rem;
 }
 
-input {
+.inpu {
   border: none;
   font-size: 1rem;
   line-height: 1.25rem;
   outline: none;
 }
-input:focus {
+.inpu:focus {
   outline: none;
   border: none;
 }
-form {
+.forms {
   display: flex;
 }
 

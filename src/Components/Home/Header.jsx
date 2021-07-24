@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link} from "react-router-dom";
 
 const Head = styled.div`
   display: flex;
@@ -7,7 +8,7 @@ const Head = styled.div`
 
   div {
     color: #2d2d2d;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 `;
 
@@ -75,7 +76,7 @@ function Header() {
             fontWeight: "700",
           }}
         >
-          Sign in
+          <Link to="/signup">Sign Up</Link>
         </div>
         <div
           style={{

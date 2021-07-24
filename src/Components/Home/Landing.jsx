@@ -8,12 +8,12 @@ import { useCallback, useState } from "react";
 import { ResumeUpload } from "./ResumeUpload";
 import { Link} from "react-router-dom";
 
-// import { Header1 } from "./Header1";
-// import { Head1 } from "./Head1";
+import { Header1 } from "./Header1";
+import { Head1 } from "./Head1";
 
 function Landing() {
   const [search, setSearch] = useState([]);
-  const [sign, setSign] = useState(false);
+  const [sign, setSign] = useState(true);
   const debounce = (func) => {
     let timer;
     return function (...args) {
@@ -38,10 +38,10 @@ function Landing() {
 
   return (
     <div>
-      {/* <div className={styles.head}> {sign ? <Header /> : <Header1 />}</div> */}
+      <div className={styles.head}> {sign ? <Header /> : <Header1 />}</div>
 
       <div className={styles.head2}>
-        {/* <Head1 /> */}
+        <Head1 />
       </div>
 
       <div
@@ -53,7 +53,7 @@ function Landing() {
       >
         <div style={{ display: "flex" }}>
           <div className={styles.area}>
-            <form action="">
+            <form className={styles.forms} action="">
               <div className={styles.deb}>
                 <div className={styles.search}>
                   <div className={styles.lab}>What</div>
@@ -95,7 +95,7 @@ function Landing() {
                 </div>
               </div>
             </form>
-            <button className={styles.btn,styles.buttn}><Link exact to="/users">Find jobs</Link></button>
+            <button className={styles.btn,styles.buttn}><Link exact to="/results">Find jobs</Link></button>
           </div>
         </div>
 
