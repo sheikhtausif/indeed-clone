@@ -1,9 +1,9 @@
 import { Login } from "./Login";
-import {SignIn} from './SignIn'
+import { SignIn } from './SignIn'
 
-export function Mypage(){
+export function Mypage() {
     return <>
-    <Login />
-    <SignIn />    
+        <Login />
+        <SignIn />
     </>
 }

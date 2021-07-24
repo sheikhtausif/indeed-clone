@@ -1,6 +1,6 @@
 import './App.css';
 import MainApply from './Components/ApplyJobs/MainApply'
-import { Mypage } from './components/Login&SignIn/Mypage'
+import { Mypage } from './Components/Login&SignIn/Mypage'
 
 function App() {
   return (
