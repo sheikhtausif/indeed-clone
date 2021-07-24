@@ -70,10 +70,10 @@ const AddCoverLetter = styled.div`
         color: white;
         background: rgb(22, 64, 129);
         border-radius: 50%;
-        margin-left: 130px;
+        margin-left: 120px;
     }
     div:nth-child(6)>:nth-child(3){
-        margin-left: 160px;
+        margin-left: 150px;
     }
     div:nth-child(6)>:nth-child(5){
         display:block;
