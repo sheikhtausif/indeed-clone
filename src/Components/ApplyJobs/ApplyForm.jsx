@@ -24,15 +24,16 @@ const ApplyForm = () => {
     const [coverLetter, setCoverLetter] = useState(true);
     const inputRef = useRef()
     // const [myPdf, setMyPdf] = useState("");
-    const [newPdf, setNewPdf] = useState("");
+    // console.log('myPdf:', myPdf)
+    // const [newPdf, setNewPdf] = useState("");
 
-    const [formData1, setFormData1] = useState({})
+    const [formData, setFormData] = useState({})
 
     const handleChange = (event) => {
         // console.log(event.target.value);
         const { name, value } = event.target
 
-        setFormData1({ ...formData1, [name]: value })
+        setFormData({ ...formData, [name]: value })
         // setMyPdf(event.target.files[0]);
 
     }
@@ -42,7 +43,7 @@ const ApplyForm = () => {
         // console.log("handleContinue1")
         setStep1(!step1)
         setStep2(!step2)
-        // console.log('formData:', formData1)
+        // console.log('formData:', formData)
 
     }
     const handleContinue2 = () => {
@@ -51,17 +52,17 @@ const ApplyForm = () => {
         setStep2(!step2)
         setStep3(!step3)
 
-        const reader = new FileReader();
-        console.log(reader);
-        reader.onload = () => {
-            if (reader.readyState === 2) {
-                setNewPdf(reader.result);
-            }
-        };
+        // const reader = new FileReader();
+        // console.log(reader);
+        // reader.onload = () => {
+        //     if (reader.readyState === 2) {
+        //         setNewPdf(reader.result);
+        //     }
+        // };
         // reader.readAsDataURL(myPdf);
 
-        setFormData1({ ...formData1, newPdf })
-        // console.log('formData:', formData1)
+        // setFormData({ ...formData, newPdf })
+        // console.log('formData:', formData)
 
     }
     const handleContinue3 = (event) => {
@@ -69,7 +70,7 @@ const ApplyForm = () => {
         // console.log("handleContinue3")
         setStep3(!step3)
         setStep4(!step4)
-        console.log('formData:', formData1)
+        console.log('formData:', formData)
 
     }
 
@@ -92,7 +93,7 @@ const ApplyForm = () => {
 
     return (
         <>
-            {!step1 && <FormDiv>
+            {step1 && <FormDiv>
                 {/* <div >
                 </div> */}
                 <ProgressBar percent={20} unfilledBackground="gray" />
@@ -209,7 +210,7 @@ const ApplyForm = () => {
                 <p>Having an issue with this application?<span>Tell us more</span></p>
             </AddCoverLetter>}
 
-            {!review && <ReviewPage formData1={formData1} handleReview={handleReview} />}
+            {review && <ReviewPage formData={formData} handleReview={handleReview} />}
         </>
     )
 }

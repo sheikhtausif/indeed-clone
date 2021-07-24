@@ -42,6 +42,7 @@ const AddExperience = styled.div`
         border: 1px solid wheat;
         border-radius:8px;
         margin-top: 8px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     }
 
     & input{
