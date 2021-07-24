@@ -1,9 +1,13 @@
 import './App.css';
-import {Mypage} from './components/Login&SignIn/Mypage'
+import MainApply from './Components/ApplyJobs/MainApply'
+// import { Mypage } from './Components/Login&SignIn/Mypage'
+
 function App() {
   return (
     <div className="App">
-      <h1><Mypage /></h1>
+      <MainApply />
+      {/* <h1><Mypage /></h1> */}
+
     </div>
   );
 }
