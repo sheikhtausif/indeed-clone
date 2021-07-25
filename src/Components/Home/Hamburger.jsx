@@ -5,7 +5,7 @@ import { SidebarData } from "./SidebarData";
 import "./hamburger.module.css";
 
 function Hamburger() {
-  const [sidebar, setSidebar] = useState(false);
+  const [sidebar, setSidebar] = useState(true);
 
   const showSidebar = () => setSidebar(!sidebar);
   console.log(sidebar);
@@ -14,7 +14,7 @@ function Hamburger() {
       <div className="hamburger" onClick={showSidebar}>
         <FaBars />
       </div>
-      <div className={sidebar ? "active" : "nav-menu"}>
+      {/* <div className={!sidebar?"active":"nav-menut"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <div className="cross">
@@ -31,7 +31,7 @@ function Hamburger() {
             );
           })}
         </ul>
-      </div>
+      </div> */}
     </>
   );
 }

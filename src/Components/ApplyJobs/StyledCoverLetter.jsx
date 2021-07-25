@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const AddCoverLetter = styled.div`
-    width: 46%;
+    width: 56%;
     margin: auto;
     *{
         margin:0;
@@ -31,11 +31,12 @@ const AddCoverLetter = styled.div`
         border-radius:5px;
     }
 
-    h2{
+    h4:nth-child(3){
         margin: 19px 0;
     }
-    h4>span{
+    h5>span{
         font-weight: normal;
+        
     }
 
     & label{
@@ -43,7 +44,7 @@ const AddCoverLetter = styled.div`
     }
     & input{
         display: block;
-        width: 94%;
+        width: 100%;
         padding:11px;
         border: 1px solid black;
         border-radius:7px;
@@ -73,19 +74,20 @@ const AddCoverLetter = styled.div`
         color: white;
         background: rgb(22, 64, 129);
         border-radius: 50%;
-        margin-left: 80px;
+        margin-left: 120px;
     }
     div:nth-child(6)>:nth-child(3){
-        margin-left: 110px;
+        margin-left: 178px;
     }
     div:nth-child(6)>:nth-child(5){
         display:block;
     }
-    & section>h4{
+    & section>h5{
         color: rgb(22, 64, 129);
     }
     & section>p{
         font-size:14px;
+        text-align:left;
     }
 
     div:nth-child(7){

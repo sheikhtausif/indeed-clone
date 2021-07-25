@@ -15,6 +15,8 @@ export const Filters = ({setUsers,jobs}) => {
   const [salary, setSalary] = useState(0);
   const [direc, setDirec] = useState(true);
   const [calculated, setCalculated] = useState(0);
+  const jobPosition = useRef()
+  let searchQuery = localStorage.getItem('searchQuery')
   
   // const sliderposition = useRef()
   console.log(calculated);
@@ -70,7 +72,7 @@ export const Filters = ({setUsers,jobs}) => {
           <form className="form">
             <div  className="job-input">
               What
-              <input type="text" placeholder="Accountant" />
+              <input value={searchQuery} type="text" placeholder="Accountant" />
             </div>
             <div className="job-input">
               Where

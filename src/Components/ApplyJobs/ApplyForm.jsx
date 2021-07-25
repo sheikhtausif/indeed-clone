@@ -15,7 +15,7 @@ import AddExperience from './StyledExperience'
 import AddCoverLetter from './StyledCoverLetter'
 
 
-const ApplyForm = () => {
+const ApplyForm = ({setRight}) => {
     const [step1, setStep1] = useState(true)
     const [step2, setStep2] = useState(false)
     const [step3, setStep3] = useState(false)
@@ -24,9 +24,10 @@ const ApplyForm = () => {
     const [coverLetter, setCoverLetter] = useState(true);
     const inputRef = useRef()
 
-
+    const comp = JSON.parse(localStorage.getItem('appliedJob')).companyName
     const [formData, setFormData] = useState({})
-
+    let user = JSON.parse(localStorage.getItem('user'))
+    
     const handleChange = (event) => {
         const { name, value } = event.target
 
@@ -54,6 +55,7 @@ const ApplyForm = () => {
     const handleReview = () => {
         setStep4(!step4)
         setReview(!review)
+        setRight(false)
         console.log(formData)
     }
 
@@ -73,8 +75,8 @@ const ApplyForm = () => {
                 <ProgressBar percent={20} unfilledBackground="gray" />
 
 
-                <h5>Application step 1 of 5</h5>
-                <h2>Add your contact information</h2>
+                <h6>Application step 1 of 5</h6>
+                <h4 style={{fontWeight:600,margin:"19px 0"}}>Add your contact information</h4>
                 <form>
                     <label htmlFor="firstName">First name</label>
                     <input type="text" name="firstName" onChange={handleChange} />
@@ -82,8 +84,8 @@ const ApplyForm = () => {
                     <input type="text" name="lastName" onChange={handleChange} />
                     <label htmlFor="phoneNumber">Phone number</label>
                     <input type="text" name="phoneNumber" onChange={handleChange} />
-                    <h4>Email</h4>
-                    <p>email@example.com</p>
+                    <h5>Email</h5>
+                    <p>{user.emaild}</p>
                     <label htmlFor="city">City, State </label><small>(optional)</small>
                     <input type="text" name="city" onChange={handleChange} />
                     <div>
@@ -91,7 +93,7 @@ const ApplyForm = () => {
                         <p>Your online resume will also be updated with this contact information.</p>
                     </div>
                     <div>
-                        <h4>Return to job search</h4>
+                        <h5>Return to job search</h5>
                         <button onClick={handleContinue1}>Continue</button>
                     </div>
                 </form>
@@ -103,10 +105,10 @@ const ApplyForm = () => {
                 <ProgressBar percent={40} unfilledBackground="gray" />
 
                 <div>
-                    <BiArrowBack onClick={handleContinue1} />
-                    <h5>Application step 2 of 5</h5>
+                    <BiArrowBack id="arrow"  onClick={handleContinue1} />
+                    <h6>Application step 2 of 5</h6>
                 </div>
-                <h2 style={{margin:0,padding:0}}>Add a resume for FlexTrade</h2>
+                <h3 style={{marginTop:20,paddingTop:20,fontWeight:700}}>Add a resume for {comp}</h3>
                 <input type="file" name="resume" onChange={handleChange} ref={inputRef} style={{ display: 'none' }} />
                 <div onClick={handleChoose}>
                     <BsFileEarmarkArrowUp />
@@ -118,7 +120,7 @@ const ApplyForm = () => {
                 </div>
 
                 <div>
-                    <h4 style={{margin:0,padding:0}}>Return to job search</h4>
+                    <h5 style={{margin:0,padding:0}}>Return to job search</h5>
                     <button onClick={handleContinue2}>Continue</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
@@ -129,11 +131,11 @@ const ApplyForm = () => {
                 <ProgressBar percent={60} unfilledBackground="gray" />
 
                 <div>
-                    <BiArrowBack onClick={handleContinue2} />
-                    <h5>Application step 3 of 5</h5>
+                    <BiArrowBack id="arrow" onClick={handleContinue2} />
+                    <h6>Application step 3 of 5</h6>
                 </div>
-                <h2>Enter a past job that shows relevant experience</h2>
-                <h4>Relevant experience <span>(optional)</span></h4>
+                <h4 style={{marginTop:6,marginBottom:25}}>Enter a past job that shows relevant experience</h4>
+                <h5>Relevant experience <span>(optional)</span></h5>
                 <form action="">
                     <label htmlFor="jobTitle">Job title</label>
                     <input type="text" name="jobTitle" onChange={handleChange} />
@@ -143,7 +145,7 @@ const ApplyForm = () => {
                     <input type="number" name="experience" onChange={handleChange} />
                 </form>
                 <div>
-                    <h4>Exit</h4>
+                    <h5>Exit</h5>
                     <button onClick={handleContinue3}>Continue</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
@@ -153,16 +155,16 @@ const ApplyForm = () => {
                 {/* <div></div> */}
                 <ProgressBar percent={80} unfilledBackground="gray" />
 
-                <div>
-                    <BiArrowBack onClick={handleContinue3} />
-                    <h5>Application step 4 of 5</h5>
+                <div className="arrowBack">
+                    <BiArrowBack id="arrow"  onClick={handleContinue3} />
+                    <h6>Application step 4 of 5</h6>
                 </div>
-                <h2>Want to include any supporting documents?</h2>
-                <h4>Cover letter <span>(optional)</span></h4>
+                <h4>Want to include any supporting documents?</h4>
+                <h5>Cover letter <span>(optional)</span></h5>
                 <div onClick={handleCoverLetter}>
                     <CgFileRemove />
                     <section>
-                        <h4>Apply without cover letter</h4>
+                        <h5>Apply without cover letter</h5>
                         <p>Cover letter is optional for this job</p>
                     </section>
                     {coverLetter && <TiTick />}
@@ -170,7 +172,7 @@ const ApplyForm = () => {
                 <div onClick={handleCoverLetter}>
                     <FaFileSignature />
                     <section>
-                        <h4>Write cover letter</h4>
+                        <h5>Write cover letter</h5>
                         <p>Explain how you're a good fit</p>
                     </section>
                     {!coverLetter && <TiTick />}
@@ -178,7 +180,7 @@ const ApplyForm = () => {
                     <textarea name="coverLetter" cols="30" rows="10"></textarea> */}
                 </div>
                 <div>
-                    <h4>Exit</h4>
+                    <h5>Exit</h5>
                     <button onClick={handleReview}>Review your application</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>

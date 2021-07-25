@@ -1,12 +1,23 @@
- .App{
+  .App{
   width: 100%;
-  
-}
+  /* overflow-x: hidden !important; */
+} 
 
-*,
+::-webkit-scrollbar{
+  display: none;
+}
+/* *,
 *::before,
 *::after {
   box-sizing:content-box !important;
+}  */
+#arrow{
+  cursor:pointer;
+        width: 40px;
+        height:28px;
+        margin-right: 8px;
+        padding:5px !important;
+        color: gray;
 }
 .upper-part{
   width: 77%;
@@ -220,4 +231,50 @@ input[type="range"]::-moz-focus-outer {
 .hidden {
   display: none;
 }
+.success{
+  width: 480px;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,.4) ;
+}
+.information{
+  width: 100%;
+  
+}
+.information>div{
+  width: 100%;
+  margin-left: 20px;
+  display: flex;
+  align-items: flex-start;
+}
+.information>div p{
+  font-size: 15px;
+  margin-left: 10px;
 
+}
+.gobackk{
+  width: 80% !important;
+  height: 50px;
+  border-radius: 8px;
+  margin: auto;
+  margin-left: 45px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+  margin-bottom: 20px;
+  font-size: 18px;
+  margin-top: 40px;
+  font-weight: 700;
+  color: rgb(37,87,175);
+  border: 1px solid lightblue;
+  cursor: pointer;
+}
+.gobackk:hover{
+  background-color: lightblue;
+  border: 1px solid blue;
+}
+.gobackk a{
+  color:rgb(37,87,175);
+}

@@ -5,10 +5,11 @@ import "bootstrap/dist/css/bootstrap.css";
 import Hamburger from "./Hamburger";
 
 const Head = styled.div`
+
   display: flex;
   padding-left: 15px;
   padding-top: 15px;
-  width: 100vw;
+  width: 100%;
   div {
     color: #2d2d2d;
     font-size: 0.875rem;
@@ -16,9 +17,9 @@ const Head = styled.div`
 `;
 
 const Right = styled.div`
-  margin-left: 50vw;
+  margin-left: 48vw;
   display: flex;
-  width: 30vw;
+  width: 28vw;
   div {
     margin-right: 20px;
   }

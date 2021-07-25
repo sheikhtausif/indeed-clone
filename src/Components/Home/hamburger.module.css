@@ -1,37 +1,16 @@
-.hamburger {
-  display: flex;
 
-  justify-content: start;
-  align-items: center;
-}
-.menu-bars {
-  margin-left: 3rem;
-  font-size: 2rem;
-  background: red;
-}
-.nav-menu {
-  display: flex;
-  position: fixed;
+.nav-menut {
+  display: none;
+  
   top: 0;
   right: -100%;
   transition: 850ms;
 }
-.active {
+.activeh {
   display: flex;
-
-  margin: 0;
-  position: fixed;
-  top: 0px;
-  height: 100%;
-  background-color: rgb(255, 255, 255);
-  flex-direction: column;
-  width: 70%;
-  min-width: min(100%, 16.875rem);
-  max-width: 30rem;
-  right: 0px;
-  transition: right 300ms ease 0s;
-  padding-right: 1rem;
-  z-index: 10;
+  width: 50px;
+  height: 50px;
+  background-color: red;
 }
 
 .nav-text {
@@ -58,7 +37,20 @@
 }
 .nav-menu-items {
   width: 100%;
-  padding-left: 0px;
+  display: flex;
+  margin: 0;
+  position: absolute !important;
+  top: 110px !important;
+  height: 100%;
+  background-color: red;
+  flex-direction: column;
+  width: 70%;
+  min-width: 100%;
+ 
+  right: 455pxpx;
+  transition: right 300ms ease 0s;
+  padding-right: 450px !important;
+  z-index: 10;
 }
 .navbar-toogle {
   width: 10%;

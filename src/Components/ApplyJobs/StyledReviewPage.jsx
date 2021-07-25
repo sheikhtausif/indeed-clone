@@ -1,20 +1,30 @@
 import styled from "styled-components";
 
 const ReviewDiv = styled.div`
-    width: 46%;
+    width: 40%;
+    position:absolute;
+    background:white;
+    right:410px;
+    
+    z-index:102S;
     margin:16px auto;
     padding:24px;
     border: 1px solid lightgrey;
     border-radius:8px;
 
-    /* div :nth-child(1){
+        font-size:16px;
+     #prog{
         width: 100%;
         height:7px;
         background: navy;
         border-radius:12px;
         margin: 6px 0 10px;
         padding:0;
-    } */
+    } 
+    *{
+        margin:0;
+        padding:0;
+    }
     h3{
         color: #3d3a3a;
     }
@@ -33,9 +43,11 @@ const ReviewDiv = styled.div`
         border-radius:5px;
     }
     h2{
+        font-size:20px;
         margin: 15px 0;
     }
     h4{
+        font-size:16px;
         color: grey;
     }
     div:nth-child(5){
@@ -54,7 +66,7 @@ const ReviewDiv = styled.div`
     }
     div:nth-child(5) h3, div:nth-child(9) h3, div:nth-child(11) h3{
         font-size:17px;
-        margin-bottom:20px;
+        margin-bottom:20px !important;
     }
     small{
         color: grey;
