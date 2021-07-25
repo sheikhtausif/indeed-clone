@@ -16,7 +16,7 @@ import { Head1 } from '../Home/Head1';
 export const SearchResults = () => {
   let jobs = JSON.parse(localStorage.getItem('jobs'))
   const [users, setUsers] = useState(jobs.slice(0, 50))
-  const [sign, setSign] = useState(jobs.slice(0, 50))
+  const [sign, setSign] = useState(false)
   const [pageNumber, setpageNumber] = useState(0)
   const [details, setDetails] = useState("")
   const [fa, setFa] = useState(true)

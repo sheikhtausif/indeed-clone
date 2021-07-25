@@ -44,7 +44,7 @@
   }
   
   .btn {
-    width: 91%;
+    width: 91% !important;
     height: 40px;    
     position: absolute !important;
     top: 33vh;
@@ -126,13 +126,16 @@ margin-top: 20px !important;
 }
 .deb {
   margin-right: 0.5rem;
-
+  overflow-y: scroll;
   width: 24rem;
   border: 0.0625rem solid #949494 !important;
   border-radius: 0.5rem;
-  overflow: hidden;
+ 
   z-index: 1;
   max-height: 300px;
+}
+.deb::-webkit-scrollbar{
+  display: none;
 }
 /* .deb:focus{
     border :#2557a7;
@@ -213,6 +216,8 @@ margin-top: 20px !important;
   /* border-bottom: 1px solid #e6e6e6; */
   padding: 10px 5px;
   cursor: pointer;
+  padding-left: 15px;
+
   color: black;
 }
 .buttn {

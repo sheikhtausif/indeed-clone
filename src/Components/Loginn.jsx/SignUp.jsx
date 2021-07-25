@@ -127,6 +127,10 @@ export function SignUp() {
     
     console.log(email,password);
     const onEmailChange = (e) => {
+        let y = true
+        let x=0
+        localStorage.setItem('y',JSON.stringify(y))
+        localStorage.setItem('x',JSON.stringify(x))
         setEmail(e.target.value)
         sign.emaild=email
         sign.pass=password

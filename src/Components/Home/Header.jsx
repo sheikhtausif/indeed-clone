@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Link} from "react-router-dom";
-
+import { useRef} from "react";
 const Head = styled.div`
   display: flex;
   padding-left: 15px;
@@ -45,7 +45,9 @@ const Right = styled.div`
   }
 `;
 
-function Header() {
+function Header({setSign}) {
+  console.log(",ndkjdajksdhkashdk");
+  const links =useRef()
   return (
     <Head style={{ borderBottom: "1px solid #e4e2e0", height: "50px" }}>
       <div>
@@ -81,7 +83,11 @@ function Header() {
             fontWeight: "700",
           }}
         >
-          <Link to="/signup">Sign In</Link>
+          <Link ref={links} to="/signup"></Link>
+          <nav  onClick={()=>{
+           
+            links.current.click()
+          }}>Sign In</nav>
         </div>
         <div
           style={{

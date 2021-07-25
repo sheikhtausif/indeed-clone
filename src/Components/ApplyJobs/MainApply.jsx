@@ -1,6 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import ApplyForm from './ApplyForm'
+import { Header1 } from '../Home/Header1';
+import { Header } from '../Home/Header';
+import { Head1 } from '../Home/Head1';
+import styles from "../Home/landing.module.css";
+import { useState } from 'react';
+
 // import { useLocation } from 'react-router'
 
 const MainApplyDiv = styled.div`
@@ -18,8 +24,13 @@ const RightApplyDiv = styled.div`
 
 
 const MainApply = () => {
+    const [sign, setSign] = useState(false)
 
-    return (
+    return (<>
+            <div className={styles.head}> {sign ? <Header /> : <Header1 />}</div>
+      <div className={styles.head2}>
+        <Head1 />
+      </div>
         <MainApplyDiv>
             <LeftApplyDiv>
 
@@ -31,6 +42,7 @@ const MainApply = () => {
 
             </RightApplyDiv>
         </MainApplyDiv>
+        </>
     )
 }
 

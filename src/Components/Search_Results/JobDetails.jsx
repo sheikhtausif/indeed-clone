@@ -7,7 +7,7 @@ import { Link} from "react-router-dom";
 
 import StarRatings from 'react-star-ratings';
 export const JobDetails = ({details, crossit, setCrossit}) => {
-    const [saved,setSaved] = useState(false)
+    const [saved,setSaved] = useState(true)
     console.log(details);
     return (
      <div>

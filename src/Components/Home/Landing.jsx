@@ -4,7 +4,7 @@ import { BsSearch } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import styles from "./landing.module.css";
 import { Optioncard } from "./Optioncard";
-import { useCallback, useState } from "react";
+import { useCallback, useState ,useEffect,useRef} from "react";
 import { ResumeUpload } from "./ResumeUpload";
 import { Link} from "react-router-dom";
 
@@ -12,6 +12,9 @@ import { Header1 } from "./Header1";
 import { Head1 } from "./Head1";
 
 function Landing() {
+  const [open,setOpen] = useState(true)
+  const buttref = useRef();
+  const options = useRef();
   const [search, setSearch] = useState([]);
   const [sign, setSign] = useState(true);
   const debounce = (func) => {
@@ -25,20 +28,37 @@ function Landing() {
       }, 500);
     };
   };
+  console.log(sign);
+   useEffect(()=>{
+      let y = JSON.parse(localStorage.getItem('y'))
+      let x = JSON.parse(localStorage.getItem('x'))
+ if(y==true && x==0){
 
+   setSign(false)
+   x++
+   localStorage.setItem('x',JSON.stringify(x))
+
+ }
+  },[sign])
+  const manage=(e)=>{
+   let searchQuery = e.target.innerText
+   localStorage.setItem("searchQuery",searchQuery)
+
+    options.current.value=e.target.innerText
+    buttref.current.style.height = "40px"
+    buttref.current.style.overflowY="none"
+  }
   const handleChange = (event) => {
     const { value } = event.target;
 
-    fetch(`https://demo.dataverse.org/api/search?q=${value}`)
-      .then((res) => res.json())
-      .then((json) => setSearch(json.data.items));
-  };
-
+   let comp = JSON.parse(localStorage.getItem('jobs'))
+   setSearch(comp)
+  }
   const optimisedVersion = useCallback(debounce(handleChange), []);
 
   return (
-    <div className="sd">
-      <div className={styles.head}> {sign ? <Header /> : <Header1 />}</div>
+    <div  className="sd">
+      <div className={styles.head}> {sign ? <Header setSign={setSign} /> : <Header1  setSign={setSign}/>}</div>
 
       <div className={styles.head2}>
         <Head1 />
@@ -54,12 +74,13 @@ function Landing() {
         <div style={{ display: "flex" }}>
           <div className={styles.area}>
             <form className={styles.forms} action="">
-              <div className={styles.deb}>
+              <div ref={buttref} className={styles.deb}>
                 <div className={styles.search}>
                   <div className={styles.lab}>What</div>
                   <div className={styles.inp}>
                     <input
                       type="text"
+                      ref={options}
                       placeholder="Job title, keywords, or company"
                       className={styles.inpu}
                       onChange={optimisedVersion}
@@ -73,7 +94,7 @@ function Landing() {
                   <div className={styles.autocomplete}>
                     {search?.map((el, i) => (
                       <div key={i} className={styles.autocompleteItems}>
-                        <span>{el.name}</span>
+                        <span onClick={manage}>{el.job}</span>
                       </div>
                     ))}
                   </div>

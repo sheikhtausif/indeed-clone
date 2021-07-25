@@ -13,6 +13,7 @@ import { MdHelp } from "react-icons/md";
 // import "bootstrap/dist/css/bootstrap.css";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
+import userEvent from "@testing-library/user-event";
 
 const Head = styled.div`
   display: flex;
@@ -61,7 +62,8 @@ const Right = styled.div`
   }
 `;
 
-function Header1() {
+function Header1({setSign}) {
+  let user = JSON.parse(localStorage.getItem('user'))
   return (
     <>
       <Head style={{ borderBottom: "1px solid #e4e2e0", height: "50px" }}>
@@ -104,8 +106,7 @@ function Header1() {
               overlay={
                 <Popover style={{ width: "600px" }}>
                   <Popover.Title as="h3" style={{ marginTop: "10px" }}>
-                    <span style={{ display: "flex" }}>Shubham Kumar</span>
-                    <span>sprince1406@gmail.com</span>
+                    <span>{user.emaild}</span>
                   </Popover.Title>
 
                   <Popover.Content>
@@ -157,6 +158,10 @@ function Header1() {
                   <hr />
                   <Popover.Title
                     as="h3"
+                    onClick={()=>{
+                      console.log("iuyg");
+                      setSign(true)
+                    }}
                     style={{
                       marginTop: "0px",
                       textAlign: "center",
