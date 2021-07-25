@@ -13,7 +13,7 @@ import { Head1 } from "./Head1";
 
 function Landing() {
   const [search, setSearch] = useState([]);
-  const [sign, setSign] = useState(true);
+  const [sign, setSign] = useState(false);
   const debounce = (func) => {
     let timer;
     return function (...args) {
