@@ -39,7 +39,7 @@ export const SearchResults = () => {
   console.log(details);
   return (
     <>
-      <div className={styles.head}><Header/></div>
+      <div className={styles.head}><Header1/></div>
       <div className={styles.head2}>
         <Head1 />
       </div>

@@ -14,7 +14,7 @@ function Hamburger() {
       <div className="hamburger" onClick={showSidebar}>
         <FaBars />
       </div>
-      {/* <div id="active">
+      {/* <div className={!sidebar?"active":"nav-menut"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <div className="cross">

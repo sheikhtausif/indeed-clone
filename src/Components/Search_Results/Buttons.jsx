@@ -37,12 +37,12 @@ export const Buttons = ({tag,filters ,setUsers,jobs}) => {
         }
         else if (tag=="Remote"){
           if(temp[0]=="W"){
-            let fData = jobs.filter((el)=>(el.remote=="wfh"))
+            let fData = jobs.filter((el)=>(el.remote=="Work From Home"))
             setUsers(fData)
   
           }
           else{
-            let fData = jobs.filter((el)=>(el.remote=="onsite"))
+            let fData = jobs.filter((el)=>(el.remote=="Onsite"))
             setUsers(fData)
           }
         }

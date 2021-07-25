@@ -164,6 +164,7 @@ function Header1({setSign}) {
                     }}
                     style={{
                       marginTop: "0px",
+                      cursor:"pointer",
                       textAlign: "center",
                       color: "rgb(50,87,167)",
                     }}
