@@ -16,8 +16,8 @@
 
 }
 .right-container{
-    position: sticky;
-    top: 30px;
+    position: sticky !important;
+    top: 30px  !important;
     border: 1px solid rgba(0,0,0,.3);
     width: 52%;
     height: 600px;

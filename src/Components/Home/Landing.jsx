@@ -32,14 +32,14 @@ function Landing() {
    useEffect(()=>{
       let y = JSON.parse(localStorage.getItem('y'))
       let x = JSON.parse(localStorage.getItem('x'))
- if(y==true && x==0){
+ if(y==true && x<2){
 
    setSign(false)
    x++
    localStorage.setItem('x',JSON.stringify(x))
 
  }
-  },[sign])
+  },[])
   const manage=(e)=>{
    let searchQuery = e.target.innerText
    localStorage.setItem("searchQuery",searchQuery)

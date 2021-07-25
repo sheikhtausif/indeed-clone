@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 
 const UploadResume = styled.div`
-    width: 46%;
+    width: 56%;
     margin: auto;
    *{
        margin:0;
@@ -22,7 +22,8 @@ const UploadResume = styled.div`
     }
     div:nth-child(2)>:first-child{
         cursor:pointer;
-        width: 20px;
+        width: 40px;
+        height:20px;
         margin-right: 8px;
         padding:5px;
     }
@@ -31,7 +32,7 @@ const UploadResume = styled.div`
         border-radius:5px;
     }
 
-    h2{
+    h4{
         margin: 19px 0;
     }
 
@@ -57,7 +58,7 @@ const UploadResume = styled.div`
         color: white;
         background: rgb(22, 64, 129);
         border-radius: 50%;
-        margin-left: 90px;
+        margin-left: 175px;
     }
     & section>h4{
         color: rgb(22, 64, 129);

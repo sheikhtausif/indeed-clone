@@ -47,7 +47,6 @@ const Right = styled.div`
 
 function Header({setSign}) {
   console.log(",ndkjdajksdhkashdk");
-  const links =useRef()
   return (
     <Head style={{ borderBottom: "1px solid #e4e2e0", height: "50px" }}>
       <div>
@@ -83,11 +82,8 @@ function Header({setSign}) {
             fontWeight: "700",
           }}
         >
-          <Link ref={links} to="/signup"></Link>
-          <nav  onClick={()=>{
-           
-            links.current.click()
-          }}>Sign In</nav>
+          
+          <nav ><Link to="/signup">Sign In</Link></nav>
         </div>
         <div
           style={{

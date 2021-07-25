@@ -1,12 +1,13 @@
 import styled from 'styled-components'
 
 const FormDiv = styled.div`
-    width: 46%;
+    width: 56%;
     margin: auto;
  *{
      margin:0;
      padding:0;
  }
+
     div:first-child{
         width: 100%;
         height:7px;
@@ -32,9 +33,9 @@ const FormDiv = styled.div`
         font-weight: bold;
     }
     & input{
-        width: 92%;
+        width: 100%;
         padding:11px;
-        border: 1px solid black;
+        border: 1px solid rgba(0,0,0,.34);
         border-radius:7px;
         margin: 8px 0 28px;
         font-size:17px;

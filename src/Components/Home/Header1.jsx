@@ -173,7 +173,7 @@ function Header1({setSign}) {
                 </Popover>
               }
             >
-              <FaUser variant="success" />
+              <FaUser style={{width:18}} variant="success" />
             </OverlayTrigger>
           </div>
 

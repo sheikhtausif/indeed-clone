@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import { Container,Grid,OutlinedInput,Typography , Button} from '@material-ui/core';
-import {  IconButton, Snackbar } from '@material-ui/core';
-import CloseIcon from "@material-ui/icons/Close";
 import { FcGoogle } from "react-icons/fc";
 import { FaApple } from "react-icons/fa";
 import { SiFacebook } from "react-icons/si";
@@ -15,7 +13,6 @@ import {
 } from '@material-ui/core';
 
 import { Link, Redirect } from 'react-router-dom';
-import { red } from '@material-ui/core/colors';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -172,17 +169,17 @@ export function SignUp() {
                     <Grid container item spacing = {3}>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid #a6a6a6"}} className = {classes.buttona} variant = "outlined">
-                               <FcGoogle style={{marginRight:"110px",width:25,height:25}} /> Sign in with Google
+                               <FcGoogle style={{marginRight:"80px",width:25,height:25}} /> Sign in with Google
                             </HelperButton>
                         </Grid>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid black"}} className = {classes.buttona} variant = "outlined">
-                                <FaApple style={{marginRight:"115px",width:25,height:25}} /> Sign in with Apple
+                                <FaApple style={{marginRight:"90px",width:25,height:25}} /> Sign in with Apple
                             </HelperButton>
                         </Grid>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid #1877f2", color: "#1877f2"}} className = {classes.buttona} variant = "outlined">
-                               <SiFacebook style={{marginRight:"105px",width:25,height:25}} /> Sign in with Facebook
+                               <SiFacebook style={{marginRight:"75px",width:25,height:25}} /> Sign in with Facebook
                             </HelperButton>
                         </Grid>
                     </Grid>

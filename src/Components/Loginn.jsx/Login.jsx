@@ -177,17 +177,17 @@ export function Login() {
                     <Grid container item spacing = {3}>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid #a6a6a6"}} className = {classes.buttona} variant = "outlined">
-                               <FcGoogle style={{marginRight:"110px",width:25,height:25}} /> Sign in with Google
+                               <FcGoogle style={{marginRight:"85px",width:25,height:25}} /> Sign in with Google
                             </HelperButton>
                         </Grid>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid black"}} className = {classes.buttona} variant = "outlined">
-                                <FaApple style={{marginRight:"115px",width:25,height:25}} /> Sign in with Apple
+                                <FaApple style={{marginRight:"95px",width:25,height:25}} /> Sign in with Apple
                             </HelperButton>
                         </Grid>
                         <Grid item >
                             <HelperButton style = {{border: "2px solid #1877f2", color: "#1877f2"}} className = {classes.buttona} variant = "outlined">
-                               <SiFacebook style={{marginRight:"105px",width:25,height:25}} /> Sign in with Facebook
+                               <SiFacebook style={{marginRight:"80px",width:25,height:25}} /> Sign in with Facebook
                             </HelperButton>
                         </Grid>
                     </Grid>

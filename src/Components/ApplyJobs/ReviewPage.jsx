@@ -4,33 +4,18 @@ import { ProgressBar } from 'react-step-progress-bar'
 import { VscFilePdf } from "react-icons/vsc";
 import ReviewDiv from './StyledReviewPage'
 
-
-// let formData = {
-//     city: "Budaun",
-//     company: "Masai School",
-//     experience: "1",
-//     firstName: "Tausif",
-//     jobTitle: "Developer",
-//     lastName: "Sheikh",
-//     newPdf: "",
-//     phoneNumber: "09140708447",
-//     resume: "C:\\fakepath\\Highschool.pdf"
-// }
-
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 const ReviewPage = ({ handleReview, formData }) => {
-    // console.log(formData)
-
-    const submitApplication = () => {
-        console.log("submit done");
-    }
+  let user = JSON.parse(localStorage.getItem('user'))
+    
 
     return (
         <ReviewDiv>
-            {/* <div></div> */}
-            <ProgressBar percent={100} unfilledBackground="gray" filledBackground="navy" />
+            <div id="prog"></div>
+            {/* <ProgressBar id="prog" percent={100} unfilledBackground="gray" filledBackground="navy" /> */}
             <div className="backArrow">
-                <BiArrowBack onClick={handleReview} />
-                <h5>Application step 5 of 5</h5>
+                <BiArrowBack id="arrow" onClick={handleReview} />
+                <h6>Application step 5 of 5</h6>
             </div>
             <h2>Please review your application</h2>
             <h4>Contact information</h4>
@@ -41,8 +26,8 @@ const ReviewPage = ({ handleReview, formData }) => {
                 </div>
                 <div>
                     <p>Email Address</p>
-                    <h3>email@example.com</h3>
-                    <small>To mitigate fraud, Indeed may mask your email address. If masked, the employer will see an address like <strong>mohdtausif67_j7s@indeedemail.com</strong>. Some employers, however, may still be able to unmask and see your actual email address.</small>
+                    <h3>{user.emaild}</h3>
+                    <small>To mitigate fraud, Indeed may mask your email address. If masked, the employer will see an address like <strong>{user.emaild}</strong>. Some employers, however, may still be able to unmask and see your actual email address.</small>
                 </div>
                 <div>
                     <p>City, State</p>
@@ -88,7 +73,7 @@ const ReviewPage = ({ handleReview, formData }) => {
 
             <div>
                 <h4>Exit</h4>
-                <button onClick={submitApplication} >Submit your application</button>
+                <button><Link style={{color:"white"}} to="/sucess">Submit your application</Link></button>
             </div>
             <p className="textCenter">Having an issue with this application?<span>Tell us more</span></p>
         </ReviewDiv>

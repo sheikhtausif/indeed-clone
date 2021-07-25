@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const AddExperience = styled.div`
-    width: 46%;
+    width: 56%;
     margin: auto;
 
     div:first-child{
@@ -36,7 +36,7 @@ const AddExperience = styled.div`
     }
 
     form{
-        width: 90%;
+        width: 100%;
         border: 1px solid black;
         padding:21px;
         border: 1px solid wheat;
@@ -52,9 +52,9 @@ const AddExperience = styled.div`
         font-weight: bold;
     }
     & input{
-        width: 94%;
+        width: 100%;
         padding:11px;
-        border: 1px solid black;
+        border: 1px solid rgba(0,0,0,.3);
         border-radius:7px;
         margin: 8px 0 28px;
         font-size:17px;
