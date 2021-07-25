@@ -1,5 +1,5 @@
 import './App.css';
-import { SearchResults } from './Components/Search_Results/SearchResults';
+// import { SearchResults } from './Components/Search_Results/SearchResults';
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Landing } from './Components/Home/Landing';
 import { Login } from "./Components/Login&SignIn/Login";
@@ -20,16 +20,16 @@ function App() {
           </Route>
           <Route exact path="/results">
 
-            <SearchResults />
+            {/* <SearchResults /> */}
           </Route>
           <Route path="/apply">
-            <MainApply/>
+            <MainApply />
           </Route>
           <Route path="/signup">
-            <SignIn/>
+            <SignIn />
           </Route>
           <Route path="/login">
-            <Login/>
+            <Login />
           </Route>
         </Switch>
       </div>
