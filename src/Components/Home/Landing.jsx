@@ -16,7 +16,7 @@ function Landing() {
   const buttref = useRef();
   const options = useRef();
   const [search, setSearch] = useState([]);
-  const [sign, setSign] = useState(false);
+  const [sign, setSign] = useState(true);
   const debounce = (func) => {
     let timer;
     return function (...args) {
