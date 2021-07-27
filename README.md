@@ -18,7 +18,6 @@ This is cloned version of Indeed.
 
 ## Tech
 
-Dillinger uses a number of open source projects to work properly:
 
 - Material-ui/core
 - Material-ui/icons
