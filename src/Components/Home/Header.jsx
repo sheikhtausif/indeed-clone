@@ -85,7 +85,6 @@ function Header({ setSign }) {
             fontWeight: "700",
           }}
         >
-
           <nav ><Link to="/signup">Sign In</Link></nav>
         </div>
         <div

@@ -16,7 +16,6 @@ function Landing() {
   const options = useRef();
   const [search, setSearch] = useState([]);
   const [sign, setSign] = useState(true);
-
   const debounce = (func) => {
     let timer;
     return function (...args) {
@@ -129,12 +128,10 @@ function Landing() {
         <div className={styles.contain1}>
           <div className={styles.post1}>
             <span className={styles.highlight}>Employers: Post a job -</span>
-
             <span className={styles.para}>Your next hire is here</span>
           </div>
         </div>
         <div className={styles.empty1}></div>
-
         <div className={styles.searchTitle}>
           <h2>Popular searches</h2>
           <div className={styles.options}>
