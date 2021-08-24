@@ -1,17 +1,19 @@
-/* body {
-  font-family: "Noto Sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-} */
-.sd{
+body {
+  overflow-x: hidden;
+}
+
+.sd {
   overflow-x: hidden !important;
 }
+
 .area {
   max-width: 900px;
   width: 100%;
   float: none !important;
   margin: auto;
   display: flex;
-  /* max-height: 44px; */
 }
+
 @media (max-width: 620px) {
   .area {
     max-width: 619px !important;
@@ -23,13 +25,9 @@
     padding-top: 1rem;
     flex-direction: column;
   }
-
   .deb {
     margin-bottom: 1.5rem;
-    /* height: 50px !important; */
     width: 23rem !important;
-    /* height: 50px; */
-
     padding: 5px;
     padding-bottom: 2px !important;
     max-height: 150px;
@@ -41,41 +39,32 @@
     margin-bottom: 1.5rem;
     position: absolute !important;
     top: 23vh;
-
     width: 23rem !important;
   }
-  
   .btn {
     width: 91% !important;
-    height: 40px;    
+    height: 40px;
     position: absolute !important;
     top: 33vh;
     background-color: #2557a7;
-  border: 0.0625rem solid transparent !important;
+    border: 0.0625rem solid transparent !important;
   }
- .btn a{
-  color: white;
-  font-weight: 600;
-  
- }
- .btn a:hover{
-   color: white !important;
- }
-  .link{
+  .btn a {
+    color: white;
+    font-weight: 600;
+  }
+  .btn a:hover {
+    color: white !important;
+  }
+  .link {
     color: white !important;
   }
   .post {
     display: flex;
-    /* padding: .5rem .5rem; */
     width: 100% !important;
-    /* margin: auto; */
-
-    /* display: flex;
-    width: 100vw; */
     position: absolute;
     top: 40vh !important;
     left: 20px !important;
-    /* left: 15vw !important; */
   }
   .contain1 {
     display: none;
@@ -90,12 +79,10 @@
     position: absolute !important;
     top: 43vh !important;
     width: 100%!important;
-
     padding-left: 2vw;
   }
   .empty1 {
     height: 0px;
-    
   }
   .footDiv {
     position: absolute;
@@ -107,10 +94,9 @@
   .options {
     margin: 5px !important;
     display: flex;
-   
     flex-wrap: wrap;
     max-width: 400px !important;
-margin-top: 20px !important;
+    margin-top: 20px !important;
     justify-content: flex-start !important;
   }
   .footDiv {
@@ -122,35 +108,33 @@ margin-top: 20px !important;
   .resume {
     position: absolute;
     top: 150vh !important;
-
     width: 93vw;
   }
 }
+
 .deb {
   margin-right: 0.5rem;
   overflow-y: scroll;
   width: 24rem;
   border: 0.0625rem solid #949494 !important;
   border-radius: 0.5rem;
- 
   z-index: 1;
   max-height: 300px;
 }
-.deb::-webkit-scrollbar{
+
+.deb::-webkit-scrollbar {
   display: none;
 }
-/* .deb:focus{
-    border :#2557a7;
-} */
+
 .deb2 {
   margin-right: 0.5rem;
   width: 23rem;
   border: 0.0625rem solid #949494 !important;
   border-radius: 0.5rem;
-  /* overflow: hidden; */
   z-index: 1;
   max-height: 44px;
 }
+
 .btn {
   width: 110px;
   font-weight: 600;
@@ -159,24 +143,23 @@ margin-top: 20px !important;
   max-height: 44px;
   border-radius: 8px;
 }
-.btn a{
+
+.btn a {
   color: white;
 }
-.btn a:hover{
+
+.btn a:hover {
   color: white;
 }
+
 .search {
   display: flex;
-
   align-items: center;
   padding: 1.23rem 1rem;
   border-radius: 0.5rem;
-
   background-color: #fff;
   color: #2d2d2d;
-
   line-height: 1.125rem;
-
   overflow: hidden;
   height: 1.125rem;
 }
@@ -188,10 +171,12 @@ margin-top: 20px !important;
   line-height: 1.25rem;
   outline: none;
 }
+
 .inpu:focus {
   outline: none;
   border: none;
 }
+
 .forms {
   display: flex;
 }
@@ -201,27 +186,28 @@ margin-top: 20px !important;
   font-weight: 700;
   display: inline-block !important;
 }
+
 .inp {
   width: 100%;
   margin-right: 30px;
 }
 
 /* debouncing */
+
 .autocomplete {
   width: 100%;
   background: #fff;
   border-radius: 5px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0, 3);
-  /* z-index: 1; */
 }
+
 .autocompleteItems {
-  /* border-bottom: 1px solid #e6e6e6; */
   padding: 10px 5px;
   cursor: pointer;
   padding-left: 15px;
-
   color: black;
 }
+
 .buttn {
   background-color: #2557a7;
   border: 0.0625rem solid transparent !important;
@@ -230,16 +216,16 @@ margin-top: 20px !important;
   margin-left: 10px;
   border-radius: 8px;
   padding: 0.5rem 1.5rem;
-
   font-size: 0.875rem;
   letter-spacing: 0;
   font-weight: 700;
-
   line-height: 1.5rem;
 }
+
 .contain {
   text-align: center;
 }
+
 .contain1 {
   text-align: center;
 }
@@ -247,12 +233,12 @@ margin-top: 20px !important;
 .post {
   display: flex;
   padding: 0.5rem 0.5rem;
-  
   margin: auto;
   position: absolute;
   top: 23vh;
   left: 35vw;
 }
+
 .post1 {
   display: flex;
   padding: 0.5rem 0.5rem;
@@ -262,6 +248,7 @@ margin-top: 20px !important;
   top: 30vh !important;
   left: 35vw !important;
 }
+
 .highlight {
   font-size: 1rem !important;
   color: #2557a7 !important;
@@ -271,23 +258,19 @@ margin-top: 20px !important;
   cursor: pointer;
   text-align: center;
 }
+
 .highlight:hover {
   text-decoration: underline #2557a7;
 }
+
 .para {
   font-weight: 400 !important;
   font-size: 1rem !important;
   line-height: 1.67;
 }
-/* .empty{
-    height: 20px;
-    position: absolute;
-   top: 25vh !important;
-  
-} */
+
 .searchTitle {
   border-top: 2px solid #f6f6f6;
-  
   padding-top: 48px;
   text-align: center;
   position: absolute;
@@ -295,42 +278,46 @@ margin-top: 20px !important;
   width: 100vw;
   margin: auto;
 }
+
 .searchTitle h2 {
   margin: 0 auto;
   font-size: 25px;
 }
+
 .options {
   margin: 1rem auto 0;
-
   display: flex;
-
   flex-wrap: wrap;
   max-width: 800px;
   -webkit-box-pack: center;
-
   justify-content: center;
 }
-.empty1 {
 
+.empty1 {
   height: 100px;
 }
+
 .empty2 {
   height: 80px;
 }
+
 .footDiv {
   position: absolute;
   top: 82vh;
   width: 100vw;
 }
+
 .resume {
   position: absolute;
   top: 103vh;
   width: 100vw;
 }
+
 .head {
   display: flex;
   align-items: center;
 }
+
 .head2 {
   display: none;
 }
@@ -343,10 +330,11 @@ margin-top: 20px !important;
     display: flex;
   }
 }
+
 .buttn:hover {
   background: rgb(22, 64, 129) !important;
 }
-.autocompleteItems:hover {
- background-color:lightblue!important;
 
+.autocompleteItems:hover {
+  background-color: lightblue!important;
 }

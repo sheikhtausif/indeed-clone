@@ -70,8 +70,6 @@ const ApplyForm = ({setRight}) => {
     return (
         <>
             {step1 && <FormDiv>
-                {/* <div >
-                </div> */}
                 <ProgressBar percent={20} unfilledBackground="gray" />
 
 
@@ -101,7 +99,6 @@ const ApplyForm = ({setRight}) => {
             </FormDiv>}
 
             {step2 && <UploadResume>
-                {/* <div></div> */}
                 <ProgressBar percent={40} unfilledBackground="gray" />
 
                 <div>
@@ -127,7 +124,6 @@ const ApplyForm = ({setRight}) => {
             </UploadResume>}
 
             {step3 && <AddExperience>
-                {/* <div></div> */}
                 <ProgressBar percent={60} unfilledBackground="gray" />
 
                 <div>
@@ -152,7 +148,6 @@ const ApplyForm = ({setRight}) => {
             </AddExperience>}
 
             {step4 && <AddCoverLetter>
-                {/* <div></div> */}
                 <ProgressBar percent={80} unfilledBackground="gray" />
 
                 <div className="arrowBack">
@@ -176,8 +171,6 @@ const ApplyForm = ({setRight}) => {
                         <p>Explain how you're a good fit</p>
                     </section>
                     {!coverLetter && <TiTick />}
-                    {/* <hr />
-                    <textarea name="coverLetter" cols="30" rows="10"></textarea> */}
                 </div>
                 <div>
                     <h5>Exit</h5>

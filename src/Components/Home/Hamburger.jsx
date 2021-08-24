@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
-import { SidebarData } from "./SidebarData";
+// import { AiOutlineClose } from "react-icons/ai";
+// import { SidebarData } from "./SidebarData";
 import "./hamburger.module.css";
 
 function Hamburger() {

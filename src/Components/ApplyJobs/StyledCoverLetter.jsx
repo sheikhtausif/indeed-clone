@@ -54,7 +54,6 @@ const AddCoverLetter = styled.div`
     }
     div:nth-child(5),div:nth-child(6){
         display:flex;
-        /* justify-content:space-evenly; */
         align-items: center;
         border: 1px solid rgb(22, 64, 129);
         border-radius:8px;

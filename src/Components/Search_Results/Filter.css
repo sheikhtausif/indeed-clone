@@ -1,64 +1,53 @@
 @media screen and (max-width: 1200px) {
   .App {
-    
     width: 100vw !important;
   }
   .upper-part {
-    
     width: 95% !important;
     margin: auto;
-    
   }
   .form {
     display: flex;
     flex-direction: column;
-}
-.form-container{
-    border: 1px solid rgba(0,0,0,.2);
+  }
+  .form-container {
+    border: 1px solid rgba(0, 0, 0, .2);
     border-radius: 10px;
     box-sizing: border-box;
-    box-shadow:  0px 5px 10px rgb(0 0 0 / 0.2);
+    box-shadow: 0px 5px 10px rgb(0 0 0 / 0.2);
     box-sizing: border-box;
-    
-}
-::-webkit-scrollbar {
-  width: 7px;
-  height: 2px;
-}
-.form div {
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    height: 2px;
+  }
+  .form div {
     width: 95% !important;
-    /* padding: 15px; */
-}
-.job-input:first-of-type{
-    
+  }
+  .job-input:first-of-type {
     border-radius: none !important;
     border: none;
-   
-    border-bottom: 1px solid rgba(0,0,0,.2);
-    
-}
-.job-input:last-of-type{
-    
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+  }
+  .job-input:last-of-type {
     border: none;
-    border-bottom: 1px solid rgba(0,0,0,.2);
-  
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
   }
   .filter-div {
     overflow-x: scroll;
   }
-  .findjobs{
-      margin-top: 10px;
+  .findjobs {
+    margin-top: 10px;
   }
-  #expand{
-    
+  #expand {
     top: 285px;
-   }
-   .button{
-       min-width: 120px !important;
-      padding: 5px !important;
-      margin-bottom: 10px !important;
-   }
-   .button-label{
-       font-size: 12px !important;
-   }
+  }
+  .button {
+    min-width: 120px !important;
+    padding: 5px !important;
+    margin-bottom: 10px !important;
+  }
+  .button-label {
+    font-size: 12px !important;
+  }
 }

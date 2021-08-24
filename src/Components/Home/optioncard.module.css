@@ -18,7 +18,6 @@
 }
 .cards:hover {
   background-color: rgb(171, 169, 168);
-  /* background-color: red; */
 }
 .logo {
   display: inline-block;

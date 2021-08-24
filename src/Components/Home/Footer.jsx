@@ -23,6 +23,7 @@ const Foot = styled.div`
   }
   li:hover {
     text-decoration: underline black;
+    cursor: pointer;
     background-color: #ffffff;
   }
 
@@ -46,6 +47,7 @@ const Foot = styled.div`
     li {
       color:grey;
       background-color: #ffffff;
+      
     }
   }
 `;

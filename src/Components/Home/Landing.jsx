@@ -4,19 +4,19 @@ import { BsSearch } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import styles from "./landing.module.css";
 import { Optioncard } from "./Optioncard";
-import { useCallback, useState ,useEffect,useRef} from "react";
+import { useCallback, useState, useEffect, useRef } from "react";
 import { ResumeUpload } from "./ResumeUpload";
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 import { Header1 } from "./Header1";
 import { Head1 } from "./Head1";
 
 function Landing() {
-  const [open,setOpen] = useState(true)
   const buttref = useRef();
   const options = useRef();
   const [search, setSearch] = useState([]);
   const [sign, setSign] = useState(true);
+
   const debounce = (func) => {
     let timer;
     return function (...args) {
@@ -28,37 +28,36 @@ function Landing() {
       }, 500);
     };
   };
-  console.log(sign);
-   useEffect(()=>{
-      let y = JSON.parse(localStorage.getItem('y'))
-      let x = JSON.parse(localStorage.getItem('x'))
- if(y==true && x<2){
 
-   setSign(false)
-   x++
-   localStorage.setItem('x',JSON.stringify(x))
+  useEffect(() => {
+    let y = JSON.parse(localStorage.getItem('y'))
+    let x = JSON.parse(localStorage.getItem('x'))
+    if (y === true && x < 2) {
 
- }
-  },[])
-  const manage=(e)=>{
-   let searchQuery = e.target.innerText
-   localStorage.setItem("searchQuery",searchQuery)
+      setSign(false)
+      x++
+      localStorage.setItem('x', JSON.stringify(x))
 
-    options.current.value=e.target.innerText
+    }
+  }, [])
+  const manage = (e) => {
+    let searchQuery = e.target.innerText
+    localStorage.setItem("searchQuery", searchQuery)
+
+    options.current.value = e.target.innerText
     buttref.current.style.height = "40px"
-    buttref.current.style.overflowY="none"
+    buttref.current.style.overflowY = "none"
   }
   const handleChange = (event) => {
-    const { value } = event.target;
 
-   let comp = JSON.parse(localStorage.getItem('jobs'))
-   setSearch(comp)
+    let comp = JSON.parse(localStorage.getItem('jobs'))
+    setSearch(comp)
   }
   const optimisedVersion = useCallback(debounce(handleChange), []);
 
   return (
-    <div  className="sd">
-      <div className={styles.head}> {sign ? <Header setSign={setSign} /> : <Header1  setSign={setSign}/>}</div>
+    <div className="sd">
+      <div className={styles.head}> {sign ? <Header setSign={setSign} /> : <Header1 setSign={setSign} />}</div>
 
       <div className={styles.head2}>
         <Head1 />
@@ -87,7 +86,7 @@ function Landing() {
                     />
                   </div>
                   <div style={{ paddingRight: "0rem" }}>
-                    <BsSearch style={{width:12}} />{" "}
+                    <BsSearch style={{ width: 12 }} />{" "}
                   </div>
                 </div>
                 {search?.length > 0 && (
@@ -130,12 +129,12 @@ function Landing() {
         <div className={styles.contain1}>
           <div className={styles.post1}>
             <span className={styles.highlight}>Employers: Post a job -</span>
-           
+
             <span className={styles.para}>Your next hire is here</span>
           </div>
         </div>
         <div className={styles.empty1}></div>
-       
+
         <div className={styles.searchTitle}>
           <h2>Popular searches</h2>
           <div className={styles.options}>

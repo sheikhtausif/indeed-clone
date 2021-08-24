@@ -1,4 +1,3 @@
-import { useState } from "react";
 import styled from "styled-components";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoNotificationsSharp } from "react-icons/io5";
@@ -10,10 +9,8 @@ import { MdEmail } from "react-icons/md";
 import { BsSearch } from "react-icons/bs";
 import { MdSettings } from "react-icons/md";
 import { MdHelp } from "react-icons/md";
-// import "bootstrap/dist/css/bootstrap.css";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
-import userEvent from "@testing-library/user-event";
 
 const Head = styled.div`
   display: flex;
@@ -25,11 +22,12 @@ const Head = styled.div`
     font-size: 0.83rem;
   }
   `;
-  
-  const Left = styled.div`
+
+const Left = styled.div`
   margin-left: 15px;
-  align-items:center;
+ 
   display: flex;
+   cursor: pointer;
 
   div {
     margin-right: 15px;
@@ -42,8 +40,9 @@ const Head = styled.div`
 `;
 
 const Right = styled.div`
-  margin-left: 50vw;
+   margin-left: 57vw;
   display: flex;
+   cursor: pointer;
   div {
     margin-right: 20px;
     padding-bottom: 15px;
@@ -62,7 +61,10 @@ const Right = styled.div`
   }
 `;
 
-function Header1({setSign}) {
+
+
+
+function Header1({ setSign }) {
   let user = JSON.parse(localStorage.getItem('user'))
   return (
     <>
@@ -158,13 +160,13 @@ function Header1({setSign}) {
                   <hr />
                   <Popover.Title
                     as="h3"
-                    onClick={()=>{
+                    onClick={() => {
                       console.log("iuyg");
                       setSign(true)
                     }}
                     style={{
                       marginTop: "0px",
-                      cursor:"pointer",
+                      cursor: "pointer",
                       textAlign: "center",
                       color: "rgb(50,87,167)",
                     }}
@@ -174,7 +176,7 @@ function Header1({setSign}) {
                 </Popover>
               }
             >
-              <FaUser style={{width:18}} variant="success" />
+              <FaUser style={{ width: 18 }} variant="success" />
             </OverlayTrigger>
           </div>
 

@@ -1,7 +1,6 @@
 import './JobCards.css'
 import '../../App.css'
 import React from "react";
-import useRef from "react";
 import { JobCards } from "./JobCards";
 import { Filters } from './Filters';
 import { JobDetails } from "./JobDetails";
@@ -11,12 +10,11 @@ import { Footer } from '../Home/Footer.jsx'
 import styles from "../Home/landing.module.css";
 import { ResumeUpload } from '../Home/ResumeUpload.jsx'
 import { Header1 } from '../Home/Header1';
-import { Header } from '../Home/Header';
 import { Head1 } from '../Home/Head1';
 export const SearchResults = () => {
   let jobs = JSON.parse(localStorage.getItem('jobs'))
   const [users, setUsers] = useState(jobs.slice(0, 50))
- 
+
   const [pageNumber, setpageNumber] = useState(0)
   const [details, setDetails] = useState("")
   const [fa, setFa] = useState(true)
@@ -39,7 +37,7 @@ export const SearchResults = () => {
   console.log(details);
   return (
     <>
-      <div className={styles.head}><Header1/></div>
+      <div className={styles.head}><Header1 /></div>
       <div className={styles.head2}>
         <Head1 />
       </div>
@@ -108,7 +106,7 @@ export const SearchResults = () => {
           </div>
         </div>
         <div className={crossit ? "hideit" : "right-container"} >
-          {details == "" ? null : <JobDetails details={details} crossit={crossit} setCrossit={setCrossit} />}
+          {details === "" ? null : <JobDetails details={details} crossit={crossit} setCrossit={setCrossit} />}
         </div>
       </div>
       <Footer />

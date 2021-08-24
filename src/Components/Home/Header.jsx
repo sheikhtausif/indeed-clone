@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { Link} from "react-router-dom";
-import { useRef} from "react";
+import { Link } from "react-router-dom";
+
+
 const Head = styled.div`
   display: flex;
+  justify-content: space-between;
   padding-left: 15px;
   padding-top: 15px;
 
@@ -15,7 +17,8 @@ const Head = styled.div`
 const Left = styled.div`
   margin-left: 15px;
   display: flex;
- 
+  cursor: pointer;
+  
 width:350px;
   div {
     font-size:15px;
@@ -29,9 +32,10 @@ width:350px;
 `;
 
 const Right = styled.div`
-  margin-left: 39vw;
+  margin-left: 45vw;
   display: flex;
   width:400px;
+  cursor: pointer;
 
   div {
     font-size:15px;
@@ -45,8 +49,7 @@ const Right = styled.div`
   }
 `;
 
-function Header({setSign}) {
-  console.log(",ndkjdajksdhkashdk");
+function Header({ setSign }) {
   return (
     <Head style={{ borderBottom: "1px solid #e4e2e0", height: "50px" }}>
       <div>
@@ -68,7 +71,7 @@ function Header({setSign}) {
         </svg>
       </div>
       <Left>
-        <div style={{borderBottom:"0.125rem solid transparent",borderBottomColor: "#2557a7"}}>Find jobs</div>
+        <div style={{ borderBottom: "0.125rem solid transparent", borderBottomColor: "#2557a7" }}>Find jobs</div>
         <div>Company reviews</div>
         <div>Find salaries</div>
       </Left>
@@ -82,7 +85,7 @@ function Header({setSign}) {
             fontWeight: "700",
           }}
         >
-          
+
           <nav ><Link to="/signup">Sign In</Link></nav>
         </div>
         <div
