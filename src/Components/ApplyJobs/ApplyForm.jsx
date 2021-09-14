@@ -15,7 +15,7 @@ import AddExperience from './StyledExperience'
 import AddCoverLetter from './StyledCoverLetter'
 
 
-const ApplyForm = ({setRight}) => {
+const ApplyForm = ({ setRight }) => {
     const [step1, setStep1] = useState(true)
     const [step2, setStep2] = useState(false)
     const [step3, setStep3] = useState(false)
@@ -27,7 +27,7 @@ const ApplyForm = ({setRight}) => {
     const comp = JSON.parse(localStorage.getItem('appliedJob')).companyName
     const [formData, setFormData] = useState({})
     let user = JSON.parse(localStorage.getItem('user'))
-    
+
     const handleChange = (event) => {
         const { name, value } = event.target
 
@@ -56,7 +56,6 @@ const ApplyForm = ({setRight}) => {
         setStep4(!step4)
         setReview(!review)
         setRight(false)
-        console.log(formData)
     }
 
     const handleChoose = () => {
@@ -74,7 +73,7 @@ const ApplyForm = ({setRight}) => {
 
 
                 <h6>Application step 1 of 5</h6>
-                <h4 style={{fontWeight:600,margin:"19px 0"}}>Add your contact information</h4>
+                <h4 style={{ fontWeight: 600, margin: "19px 0" }}>Add your contact information</h4>
                 <form>
                     <label htmlFor="firstName">First name</label>
                     <input type="text" name="firstName" onChange={handleChange} />
@@ -102,22 +101,22 @@ const ApplyForm = ({setRight}) => {
                 <ProgressBar percent={40} unfilledBackground="gray" />
 
                 <div>
-                    <BiArrowBack id="arrow"  onClick={handleContinue1} />
+                    <BiArrowBack id="arrow" onClick={handleContinue1} />
                     <h6>Application step 2 of 5</h6>
                 </div>
-                <h3 style={{marginTop:20,paddingTop:20,fontWeight:700}}>Add a resume for {comp}</h3>
+                <h3 style={{ marginTop: 20, paddingTop: 20, fontWeight: 700 }}>Add a resume for {comp}</h3>
                 <input type="file" name="resume" onChange={handleChange} ref={inputRef} style={{ display: 'none' }} />
                 <div onClick={handleChoose}>
                     <BsFileEarmarkArrowUp />
                     <section>
-                        <h4 style={{margin:0,padding:0}}>Upload resume</h4>
+                        <h4 style={{ margin: 0, padding: 0 }}>Upload resume</h4>
                         <p>Use a pdf, docx, doc, rtf and txt</p>
                     </section>
                     <TiTick />
                 </div>
 
                 <div>
-                    <h5 style={{margin:0,padding:0}}>Return to job search</h5>
+                    <h5 style={{ margin: 0, padding: 0 }}>Return to job search</h5>
                     <button onClick={handleContinue2}>Continue</button>
                 </div>
                 <p>Having an issue with this application?<span>Tell us more</span></p>
@@ -130,7 +129,7 @@ const ApplyForm = ({setRight}) => {
                     <BiArrowBack id="arrow" onClick={handleContinue2} />
                     <h6>Application step 3 of 5</h6>
                 </div>
-                <h4 style={{marginTop:6,marginBottom:25}}>Enter a past job that shows relevant experience</h4>
+                <h4 style={{ marginTop: 6, marginBottom: 25 }}>Enter a past job that shows relevant experience</h4>
                 <h5>Relevant experience <span>(optional)</span></h5>
                 <form action="">
                     <label htmlFor="jobTitle">Job title</label>
@@ -151,7 +150,7 @@ const ApplyForm = ({setRight}) => {
                 <ProgressBar percent={80} unfilledBackground="gray" />
 
                 <div className="arrowBack">
-                    <BiArrowBack id="arrow"  onClick={handleContinue3} />
+                    <BiArrowBack id="arrow" onClick={handleContinue3} />
                     <h6>Application step 4 of 5</h6>
                 </div>
                 <h4>Want to include any supporting documents?</h4>

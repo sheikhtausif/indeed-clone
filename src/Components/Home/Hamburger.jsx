@@ -8,7 +8,6 @@ function Hamburger() {
     const [sidebar, setSidebar] = useState(true);
 
     const showSidebar = () => setSidebar(!sidebar);
-    // console.log(sidebar);
     return (
         <>
             <div className="hamburger" onClick={showSidebar}>

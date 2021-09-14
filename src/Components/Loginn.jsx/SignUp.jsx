@@ -121,8 +121,6 @@ export function SignUp() {
         pass: ""
     }
 
-
-    console.log(email, password);
     const onEmailChange = (e) => {
         let y = true
         let x = 0

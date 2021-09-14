@@ -191,7 +191,7 @@ export function Login() {
                 <hr className={classes.pageBreak}></hr>
             </Grid>
             <Typography align="left" variant="caption">
-                By creating an account, you agree to Indeed's <Link to="/" style={{ textDecoration: "none", color: "#085ff8" }} href="">Terms of Service</Link>, <Link to="/" style={{ textDecoration: "none", color: "#085ff8" }} href="">Cookie Policy</Link><br />
+                By creating an account, you agree to Indeed's <Link to="/" style={{ textDecoration: "none", color: "#085ff8" }} >Terms of Service</Link>, <Link to="/" style={{ textDecoration: "none", color: "#085ff8" }} >Cookie Policy</Link><br />
                 and <Link to="/" style={{ textDecoration: "none", color: "#085ff8" }} >Privacy Policy.</Link>. You consent to receiving marketing messages from Indeed <br />
                 and may opt out from receiving such messages by following the unsubscribe link in our messages, or as detailed in our terms.
             </Typography>

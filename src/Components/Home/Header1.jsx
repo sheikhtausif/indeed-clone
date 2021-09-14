@@ -161,7 +161,6 @@ function Header1({ setSign }) {
                                     <Popover.Title
                                         as="h3"
                                         onClick={() => {
-                                            console.log("iuyg");
                                             setSign(true)
                                         }}
                                         style={{

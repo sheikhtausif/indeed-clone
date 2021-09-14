@@ -3,18 +3,14 @@ import Paper from "@material-ui/core/Paper";
 import StarRateIcon from '@material-ui/icons/StarRate';
 import './JobCards.css'
 export const JobCards = ({ ele, setDetails, crossit, setCrossit }) => {
-    console.log(ele);
     let jobs = JSON.parse(localStorage.getItem('jobs'))
     const [state, setState] = React.useState(false);
     const [status, setStatus] = React.useState(true);
     const handleClick = (e) => {
         setState((prev) => !prev);
-
-        console.log(state);
     };
     const saveJob = (e) => {
-        localStorage.setItem('appliedJob',JSON.stringify(ele))
-        console.log(e);
+        localStorage.setItem('appliedJob', JSON.stringify(ele))
         for (let i = 0; i < jobs.length; i++) {
             if (jobs[i].id === e) {
                 let item = jobs[i]

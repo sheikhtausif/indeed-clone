@@ -13,7 +13,7 @@ const ReviewDiv = styled.div`
     border-radius:8px;
 
         font-size:16px;
-     #prog{
+    #prog{
         width: 100%;
         height:7px;
         background: navy;
