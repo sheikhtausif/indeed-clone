@@ -52,6 +52,7 @@ function Landing() {
         let comp = JSON.parse(localStorage.getItem('jobs'))
         setSearch(comp)
     }
+    // eslint-disable-next-line
     const optimisedVersion = useCallback(debounce(handleChange), []);
 
     return (

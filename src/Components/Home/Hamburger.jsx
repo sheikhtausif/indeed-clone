@@ -5,16 +5,16 @@ import { FaBars } from "react-icons/fa";
 import "./hamburger.module.css";
 
 function Hamburger() {
-  const [sidebar, setSidebar] = useState(true);
+    const [sidebar, setSidebar] = useState(true);
 
-  const showSidebar = () => setSidebar(!sidebar);
-  console.log(sidebar);
-  return (
-    <>
-      <div className="hamburger" onClick={showSidebar}>
-        <FaBars />
-      </div>
-      {/* <div className={!sidebar?"active":"nav-menut"}>
+    const showSidebar = () => setSidebar(!sidebar);
+    // console.log(sidebar);
+    return (
+        <>
+            <div className="hamburger" onClick={showSidebar}>
+                <FaBars />
+            </div>
+            {/* <div className={!sidebar?"active":"nav-menut"}>
         <ul className="nav-menu-items" onClick={showSidebar}>
           <li className="navbar-toggle">
             <div className="cross">
@@ -32,8 +32,8 @@ function Hamburger() {
           })}
         </ul>
       </div> */}
-    </>
-  );
+        </>
+    );
 }
 
 export default Hamburger;

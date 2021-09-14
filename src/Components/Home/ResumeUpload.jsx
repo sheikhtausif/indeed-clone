@@ -42,14 +42,14 @@ const Bottom = styled.div`
 `;
 
 export function ResumeUpload() {
-  return (
-    <>
-      <Bottom>
-        <div>
-          <p>Let employers find you</p>
-          <button>Upload your resume</button>
-        </div>
-      </Bottom>
-    </>
-  );
+    return (
+        <>
+            <Bottom>
+                <div>
+                    <p>Let employers find you</p>
+                    <button>Upload your resume</button>
+                </div>
+            </Bottom>
+        </>
+    );
 }
