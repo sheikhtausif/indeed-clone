@@ -115,7 +115,7 @@ function Landing() {
                                 </div>
                             </div>
                         </form>
-                        <button className={styles.btn} ><Link className="link" exact to="/results">Find jobs</Link></button>
+                        <button className={styles.btn} ><Link className="link" to="/results">Find jobs</Link></button>
                     </div>
                 </div>
 

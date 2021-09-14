@@ -769,7 +769,6 @@ function App() {
                 <Switch>
                     <Route exact path="/">
                         <Landing />
-
                     </Route>
                     <Route exact path="/results">
 
