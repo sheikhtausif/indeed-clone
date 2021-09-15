@@ -18,8 +18,7 @@ const Left = styled.div`
   margin-left: 15px;
   display: flex;
   cursor: pointer;
-  
-width:350px;
+  width:350px;
   div {
     font-size:15px;
     margin-right: 15px;
@@ -71,7 +70,9 @@ function Header({ setSign }) {
                 </svg>
             </div>
             <Left>
-                <div style={{ borderBottom: "0.125rem solid transparent", borderBottomColor: "#2557a7" }}>Find jobs</div>
+                <div style={{ borderBottom: "0.125rem solid transparent", borderBottomColor: "#2557a7" }}>
+                    <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>Find jobs</Link>
+                </div>
                 <div>Company reviews</div>
                 <div>Find salaries</div>
             </Left>
@@ -83,8 +84,7 @@ function Header({ setSign }) {
                         fontSize: "1rem!important",
                         color: "#2557a7",
                         fontWeight: "700",
-                    }}
-                >
+                    }}>
                     <nav ><Link to="/signup">Sign In</Link></nav>
                 </div>
                 <div

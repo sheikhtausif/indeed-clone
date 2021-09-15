@@ -2,7 +2,8 @@ import styled from "styled-components";
 import { RiMessage2Fill } from "react-icons/ri";
 import { IoNotificationsSharp } from "react-icons/io5";
 import "bootstrap/dist/css/bootstrap.css";
-import Hamburger from "./Hamburger";
+// import Hamburger from "./Hamburger";
+import { Link } from "react-router-dom"
 
 const Head = styled.div`
 
@@ -65,7 +66,14 @@ function Head1() {
                         <IoNotificationsSharp />
                     </div>
 
-                    <Hamburger />
+                    <div
+                        style={{
+                            fontSize: "1rem!important",
+                            color: "#2557a7",
+                            fontWeight: "700",
+                        }}>
+                        <nav><Link to="/signup">Sign In</Link></nav>
+                    </div>
                 </Right>
             </Head>
         </>

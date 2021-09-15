@@ -11,6 +11,7 @@ import { MdSettings } from "react-icons/md";
 import { MdHelp } from "react-icons/md";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Popover from "react-bootstrap/Popover";
+import { Link } from 'react-router-dom'
 
 const Head = styled.div`
   display: flex;
@@ -24,14 +25,13 @@ const Head = styled.div`
   `;
 
 const Left = styled.div`
-  margin-left: 15px;
- 
-  display: flex;
+   margin-left: 15px;
+   display: flex;
    cursor: pointer;
 
   div {
-    margin-right: 15px;
-    padding-bottom: 10px;
+    margin-right: 14px;
+    margin-top: 3px;
   }
   div:hover {
     border-bottom: 0.125rem solid transparent;
@@ -41,7 +41,7 @@ const Left = styled.div`
 
 const Right = styled.div`
    margin-left: 57vw;
-  display: flex;
+   display: flex;
    cursor: pointer;
   div {
     margin-right: 20px;
@@ -88,7 +88,7 @@ function Header1({ setSign }) {
                     </svg>
                 </div>
                 <Left>
-                    <div>Find jobs</div>
+                    <div><Link to="/" style={{ textDecoration: "none", color: "inherit" }}>Find jobs</Link></div>
                     <div>Company reviews</div>
                     <div>Find salaries</div>
                 </Left>
