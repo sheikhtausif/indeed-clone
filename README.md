@@ -3,7 +3,12 @@
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 Indeed is a website which is a free service to job seekers, where you can upload a resume, create job alert emails, search for jobs, save them and apply to them directly.
+<br/>
+<br/>
+**To see the live site click the below link.**
 
+
+https://clone-of-indeed.netlify.app/
 
 ## Installing and Running
 
@@ -43,8 +48,8 @@ npm run start
 ## Technologies Used
 
 <p float="left">
-  <img src="./PreviewImageGallery/html.png" height="100"/>
-  <img src="./PreviewImageGallery/css.png"  height="100"/> 
+  <img src="./PreviewImageGallery/html5.png" height="100"/>
+  <img src="./PreviewImageGallery/css3.png"  height="100"/> 
   <img src="./PreviewImageGallery/JavaScript.png"  height="100"/>
   <img src="./PreviewImageGallery/React.png"  height="100"/>
   <img src="./PreviewImageGallery/material-ui.png" height="100"/>
@@ -58,17 +63,17 @@ npm run start
 - Import and save resumes from local computer.
 - Filter job and can save it.
 
-### Landing Page :
+### Landing Page :-
 
 The landing page of indeed website displays, most popular search results options, and search area for searching jobs.
 In top section there is a Header which gets changes when user do Sign In.
 <br/>
 <br/>
 
- <img src="./PreviewImageGallery/Screenshot (905).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (905).png" height="500"/>
  <br/>
 
-### Login Page:
+### Login Page :-
 
 Existing user can Login and new user's can SignUp themselves on page.
 From NavigationBar of Landing Page.
@@ -84,7 +89,7 @@ After Login user direcly redirect to home page.
 There are many Child pages linked to the Landing page and after login page, but for this clone following pages are made.
 <br/>
 
-### Search Job Page:
+### Search Job Page :-
 
 Here all the jobs which are available in that site is present. In this page user can find the jobs.
 
@@ -100,7 +105,7 @@ There are some Key Features which are added in website clone such as:
  <img src="./PreviewImageGallery/Screenshot (911).png" height="500" />
  
  
-### Form for applying
+### Form for applying :-
 
 For applying for any job position firstly user have to fill the form and also have to upload there Resume.
 User have to fill there personal details.
@@ -125,7 +130,7 @@ Here below is the form .
 <br/>
 
 
-### Review Page:-
+### Review Page :-
 
 Here after filling all the details by the user, user can be able to review all the details which he filled and if there some wrong details were filled then user can change it also.
 <br/>
@@ -135,7 +140,7 @@ Here after filling all the details by the user, user can be able to review all t
 <br/>
 <br/>
 
-### Successfull Page:-
+### Successfull Page :-
 
 After filling all the details and submission of the form , a successfull popup will open which confirms that the user have successfully applied for the respective job.
 <br/>
