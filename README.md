@@ -70,9 +70,9 @@ In top section there is a Header which gets changes when user do Sign In.
 
 Existing user can Login and new user's can SignUp themselves on page.
 From NavigationBar of Landing Page.
- <img src="./PreviewImageGallery/Screenshot(925).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (925).png" height="400"/>
  <br/>
- <img src="./PreviewImageGallery/Screenshot(924).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (924).png" height="400"/>
 After Login user direcly redirect to home page.
 There are many Child pages linked to the Landing page and after login page, but for this clone following pages are made.
 
@@ -89,7 +89,7 @@ There are some Key Features which are added in website clone such as:
 - _Import and save resumes from local computer._
 - _Filter job and can save it._
 
- <img src="./PreviewImageGallery/Screenshot(911).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (911).png" height="400"/>
  
  
 ### Form for applying
