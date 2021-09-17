@@ -24,7 +24,7 @@ npm install
 **To run the react app execute below command**
 
 ```
-cd ./indeed-Clone
+cd ./indeed-clone
 npm run start
 
 ```
