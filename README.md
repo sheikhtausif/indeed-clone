@@ -43,12 +43,12 @@ npm run start
 ## Technologies Used
 
 <p float="left">
-  <img src="./PreviewImageGallery/html.png" height="150"/>
-  <img src="./PreviewImageGallery/css.png"  height="150"/> 
-  <img src="./PreviewImageGallery/JavaScript.png"  height="150"/>
-  <img src="./PreviewImageGallery/React.png"  height="150"/>
-  <img src="./PreviewImageGallery/material-ui.png" height="150"/>
-   <img src="./PreviewImageGallery/bootstarp.jpg" height="150"/>
+  <img src="./PreviewImageGallery/html.png" height="100"/>
+  <img src="./PreviewImageGallery/css.png"  height="100"/> 
+  <img src="./PreviewImageGallery/JavaScript.png"  height="100"/>
+  <img src="./PreviewImageGallery/React.png"  height="100"/>
+  <img src="./PreviewImageGallery/material-ui.png" height="100"/>
+   <img src="./PreviewImageGallery/bootstarp.jpg" height="100"/>
 </p>
 
 ## Features
@@ -63,6 +63,7 @@ npm run start
 The landing page of indeed website displays, most popular search results options, and search area for searching jobs.
 In top section there is a Header which gets changes when user do Sign In.
 <br/>
+<br/>
 
  <img src="./PreviewImageGallery/Screenshot (905).png" height="400"/>
  <br/>
@@ -71,11 +72,17 @@ In top section there is a Header which gets changes when user do Sign In.
 
 Existing user can Login and new user's can SignUp themselves on page.
 From NavigationBar of Landing Page.
- <img src="./PreviewImageGallery/Screenshot (925).png" height="400"/>
  <br/>
- <img src="./PreviewImageGallery/Screenshot (924).png" height="400"/>
+ <br/>
+ <img src="./PreviewImageGallery/Screenshot (924).png" height="500"/>
+ <br/>
+ <br/>
+ <br/>
+ <img src="./PreviewImageGallery/Screenshot (925).png" height="500"/>
+ <br/>
 After Login user direcly redirect to home page.
 There are many Child pages linked to the Landing page and after login page, but for this clone following pages are made.
+<br/>
 
 ### Search Job Page:
 
@@ -90,21 +97,60 @@ There are some Key Features which are added in website clone such as:
 - _Import and save resumes from local computer._
 - _Filter job and can save it._
 
- <img src="./PreviewImageGallery/Screenshot (911).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (911).png" height="500" />
  
  
 ### Form for applying
 
+For applying for any job position firstly user have to fill the form and also have to upload there Resume.
+User have to fill there personal details.
+Here below is the form .
+
+<br/>
+<br/>
+
+<img src="./PreviewImageGallery/Screenshot (913).png" height="500" />
+
+<br/>
+<br/>
+
+<img src="./PreviewImageGallery/Screenshot (914).png" height="500" />
+
+<br/>
+<br/>
+
+<img src="./PreviewImageGallery/Screenshot (915).png" height="500" />
+
+<br/>
+<br/>
 
 
+### Review Page:-
 
+Here after filling all the details by the user, user can be able to review all the details which he filled and if there some wrong details were filled then user can change it also.
+<br/>
+<br/>
+<img src="./PreviewImageGallery/Screenshot (916).png" height="500" />
 
+<br/>
+<br/>
 
+### Successfull Page:-
 
+After filling all the details and submission of the form , a successfull popup will open which confirms that the user have successfully applied for the respective job.
+<br/>
+<br/>
+<img src="./PreviewImageGallery/Screenshot (919).png" height="500" />
 
+<br/>
+<br/>
 
+## Team Members and Contributors
 
-
+- [@Shubham Kumar](https://github.com/Shubham-047)
+- [@Tausif](https://github.com/devSudhir)
+- 
+- [@Shubham Kumar](https://github.com/Shubham-047)
 
 
 
