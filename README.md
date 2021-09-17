@@ -46,9 +46,8 @@ npm run start
   <img src="./PreviewImageGallery/React.png" height="150"/>
   <img src="./PreviewImageGallery/css.png"  height="150"/> 
   <img src="./PreviewImageGallery/JavaScript.png"  height="150"/>
-  <img src="./PreviewImageGallery/" height="150"/>
   <img src="./PreviewImageGallery/material-ui.png" height="150"/>
-   <img src="./PreviewImageGallery/bootstarp.png" height="150"/>
+   <img src="./PreviewImageGallery/bootstarp.jpg" height="150"/>
 </p>
 
 ## Features
