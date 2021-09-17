@@ -43,9 +43,10 @@ npm run start
 ## Technologies Used
 
 <p float="left">
-  <img src="./PreviewImageGallery/React.png" height="150"/>
+  <img src="./PreviewImageGallery/html.png" height="150"/>
   <img src="./PreviewImageGallery/css.png"  height="150"/> 
   <img src="./PreviewImageGallery/JavaScript.png"  height="150"/>
+  <img src="./PreviewImageGallery/React.png"  height="150"/>
   <img src="./PreviewImageGallery/material-ui.png" height="150"/>
    <img src="./PreviewImageGallery/bootstarp.jpg" height="150"/>
 </p>
@@ -63,7 +64,7 @@ The landing page of indeed website displays, most popular search results options
 In top section there is a Header which gets changes when user do Sign In.
 <br/>
 
- <img src="./PreviewImageGallery/Screenshot(905).png" height="400"/>
+ <img src="./PreviewImageGallery/Screenshot (905).png" height="400"/>
  <br/>
 
 ### Login Page:
