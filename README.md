@@ -32,13 +32,23 @@ This is cloned version of Indeed.
 - react-step-progress-bar
 - styledcomponents
 
-# Getting Started with our project
+## Installing and Running
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Executing the commands mentioned below one by one in your command line will help in making this React app .
+**Cloning**
 
+```
+git clone https://github.com/sheikhtausif/indeed-clone.git
+npm install
 
-In the project directory, you can run:
+```
 
-### `npm start`
+**To run the react app execute below command**
+
+```
+cd ./indeed-Clone
+npm run start
+
+```
 
 
