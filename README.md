@@ -17,13 +17,13 @@ Executing the commands mentioned below one by one in your command line will help
 
 ```
 git clone https://github.com/sheikhtausif/indeed-clone.git
+cd ./indeed-clone
 npm install
 ```
 
 **To run the react app execute below command**
 
 ```
-cd ./indeed-clone
 npm run start
 ```
 
